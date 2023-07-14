@@ -1,0 +1,8 @@
+.header{
+    background-color: #0C0C0E;
+}
+.welcome{
+    background-image: url("./assets/welcome_BG.png") ;
+    
+    height: 600px;
+}
