@@ -1,0 +1,43 @@
+.about__descr{
+    text-align: center;
+    padding-bottom: 8px;
+}
+.slider__container img:nth-last-child(-n+2) {
+    display: none;
+  }
+  
+  .slider{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 38px;
+  }
+  .slider__indicators{
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    padding-bottom: 38px;
+  }
+  .indicator{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    background-color: $text-color-dark;
+  
+&.active{
+    background-color: $color-primary;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

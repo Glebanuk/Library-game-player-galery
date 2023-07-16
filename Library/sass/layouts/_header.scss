@@ -1,0 +1,42 @@
+.header{
+    background-color:$header-bg;
+    
+}
+.header__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo-text{
+    color:$text-color-light;
+}
+.header__nav{
+    margin-left: auto;
+    padding-right: 43px;
+}
+.navigation__list{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+
+}
+
+.nav__item{
+padding-right: 30px;
+line-height: 5.0rem;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+}
+.nav__item:last-child{
+    padding-right: 0;
+}
+.nav-item__link{
+    color:$text-color-light;
+    transition: color 0.5s;
+}
+.nav-item__link:hover{
+    color:$color-primary
+    
+}
