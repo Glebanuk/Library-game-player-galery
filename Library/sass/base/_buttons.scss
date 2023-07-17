@@ -1,3 +1,92 @@
 .btn{
     // https://www.youtube.com/live/BJENQIX2e2o?feature=share&t=7571
 }
+
+// Favorites buttons
+.radio-btn__container{
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+.radio__block{
+    position: relative;
+}
+
+.real-radio{
+    appearance: none;
+    position: absolute;
+    padding: 5px;
+
+}
+.label{
+        font-weight: 400;
+        padding: 5px 5px 5px 40px;
+        &:hover{
+            cursor: pointer;
+            }
+
+
+    &::before{
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: #ffff;
+        border: 2px solid #000000;
+        border-radius: 50%;
+
+        position: absolute;
+        top:15%;
+        left: 0;
+
+
+    }
+    &::after{
+        content: "";
+        display: block;
+        width: 7px;
+        height: 7px;
+        background: #000000;
+        border-radius: 50%;
+
+        position: absolute;
+        top:37%;
+        left: 5%;
+
+        display: none;
+    }
+    
+}
+.real-radio:checked + .label::after{
+    display: block;
+}
+.real-radio:checked + .label  {
+            font-weight: 700;
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

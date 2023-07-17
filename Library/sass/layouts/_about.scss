@@ -9,13 +9,20 @@
   .slider{
     display: flex;
     justify-content: space-between;
-    padding-bottom: 38px;
+    padding-bottom: 33px;
   }
   .slider__indicators{
     display: flex;
     justify-content:center;
-    gap: 10px;
-    padding-bottom: 38px;
+
+    padding-bottom: 33px;
+  }
+  .indictor-container{
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .indicator{
     display: inline-block;

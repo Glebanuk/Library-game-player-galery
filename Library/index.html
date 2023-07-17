@@ -60,9 +60,16 @@
                 </div>
 
                 <div class="slider__indicators">
-                    <span class="indicator active first-indicator "></span>
-                    <span class="indicator second-indicator "></span>
-                    <span class="indicator third-indicator "></span>
+                    <div class="indictor-container">
+                        <span class="indicator active first-indicator "></span>
+                    </div>
+                    <div class="indictor-container">
+                        <span class="indicator  second-indicator "></span>
+                    </div>
+                    <div class="indictor-container">
+                        <span class="indicator  third-indicator "></span>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -70,23 +77,31 @@
             <div class="wrapper">
                     <h2 class="section__title favorites__title">Favorites <span class="title-underline"></span></h2>
                     <p class="favorite__text">Pick favorites of season</p>
-                    
+
                     <div class="radio-btn__container">
-                            <form action="process_form.php">
-                                <input type="radio" id="Winter" name="category" checked>
-                                <label for="Winter">Winter</label>
 
-                                <input type="radio" id="Spring" name="category" >
-                                <label for="Spring">Spring</label>
-
-                                <input type="radio" id="Summer" name="category" >
-                                <label for="Summer">Summer</label>
-
-                                <input type="radio" id="Autumn" name="category" >
-                                <label for="Autumn">Autumn</label>
-
-                            </form>
+                        <div class="radio__block">
+                            <input type="radio" id="Winter" name="category" class="real-radio" checked>
+                            <label for="Winter" class="label" > Winter </label>
                         </div>
+
+                        <div class="radio__block">
+                           <input type="radio" id="Spring" name="category" class="real-radio">
+                           <label for="Spring" class="label">Spring</label>
+                        </div>
+
+                        <div class="radio__block">
+                           <input type="radio" id="Summer" name="category" class="real-radio">
+                           <label for="Summer" class="label">Summer</label>
+                        </div>
+
+                        <div class="radio__block">
+                           <input type="radio" id="Autumn" name="category" class="real-radio">
+                           <label for="Autumn" class="label">Autumn</label>
+                        </div>
+                        
+                    </div>
+
                         <div class="favorites__section winter">
 
                             <div class="book__card">

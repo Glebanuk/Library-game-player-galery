@@ -1,6 +1,8 @@
 .favorite__text{
-    @include font(2.0rem, normal, 700, normal)
+    @include font(2.0rem, normal, 700, normal);
+    margin-bottom: 40px;
 }
+
 .favorites__title{
-    margin-bottom: 43px;
+    margin-bottom: 41px;
 }
