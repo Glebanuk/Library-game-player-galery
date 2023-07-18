@@ -1,6 +1,32 @@
 .btn{
-    // https://www.youtube.com/live/BJENQIX2e2o?feature=share&t=7571
+border: 1px solid $text-color-dark;
+border-radius: 2px;
+cursor: pointer;
+
+&__buy{
+    @include font(1rem, normal, 700, normal);
+    display: inline-block;
+    letter-spacing: 1px;
+    color:$text-color-dark;
+    padding:8px 24px;
+    width: 75px;
+    margin-top: auto;
+
 }
+    &__buy:hover{
+        color:$color-primary;
+        border-color: $color-primary;
+    }
+
+
+&__own{
+        color:$color-primary;
+        border-color: $color-primary;
+        
+    }
+
+}
+// https://www.youtube.com/live/BJENQIX2e2o?feature=share&t=7571
 
 // Favorites buttons
 .radio-btn__container{
@@ -8,9 +34,13 @@
     justify-content: space-between;
   align-items: center;
   width: 50%;
+  padding-bottom: 39px;
+
+
 }
 .radio__block{
     position: relative;
+
 }
 
 .real-radio{
@@ -51,11 +81,12 @@
         border-radius: 50%;
 
         position: absolute;
-        top:37%;
-        left: 5%;
+        top:40%;
+        left: 4.5%;
 
         display: none;
     }
+  
     
 }
 .real-radio:checked + .label::after{

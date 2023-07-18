@@ -31,7 +31,6 @@ h3 {
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 h4 {
@@ -43,11 +42,38 @@ h4 {
   letter-spacing: 2px;
 }
 
+.btn {
+  border: 1px solid #000;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn__buy {
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: 700;
+  font-style: normal;
+  display: inline-block;
+  letter-spacing: 1px;
+  color: #000;
+  padding: 8px 24px;
+  width: 75px;
+  margin-top: auto;
+}
+.btn__buy:hover {
+  color: #BB945F;
+  border-color: #BB945F;
+}
+.btn__own {
+  color: #BB945F;
+  border-color: #BB945F;
+}
+
 .radio-btn__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 50%;
+  padding-bottom: 39px;
 }
 
 .radio__block {
@@ -87,8 +113,8 @@ h4 {
   background: #000000;
   border-radius: 50%;
   position: absolute;
-  top: 37%;
-  left: 5%;
+  top: 40%;
+  left: 4.5%;
   display: none;
 }
 
@@ -250,6 +276,10 @@ h4 {
   background-color: #BB945F;
 }
 
+.favorites {
+  padding-bottom: 34px;
+}
+
 .favorite__text {
   font-size: 2rem;
   line-height: normal;
@@ -260,6 +290,74 @@ h4 {
 
 .favorites__title {
   margin-bottom: 41px;
+}
+
+.favorites__section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-right: 40px;
+  row-gap: 40px;
+}
+
+.spring,
+.summer,
+.autumn {
+  display: none;
+}
+
+.book__card {
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 0 15px 16px;
+  width: 550px;
+}
+
+.img-book {
+  position: absolute;
+  left: 388px;
+  bottom: -2px;
+}
+
+.card-text {
+  font-family: Forum;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 4px;
+}
+.card-text::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 60px;
+  background-color: #BB945F;
+}
+
+.book__descr {
+  font-size: 1.5rem;
+  line-height: 4rem;
+  font-weight: normal;
+  font-style: normal;
+  padding-top: 8px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-top: 0px;
+  width: 353px;
+}
+
+.book__name {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.book__author {
+  margin-top: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
