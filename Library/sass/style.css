@@ -423,4 +423,56 @@ h4 {
   margin-left: 60px;
 }
 
+.contacts {
+  padding-bottom: 30px;
+}
+
+.contacts__title {
+  margin: 10px 0 40px 0;
+}
+
+.contacts__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-blok__title, .library-director__link {
+  font-size: 2rem;
+  line-height: 4rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.contacts__block > p {
+  margin: 0px;
+}
+
+.phone-contacts {
+  padding-top: 50px;
+}
+
+.phone-contacts-service {
+  padding-top: 38px;
+}
+
+.phone-contacts-putterhum {
+  padding-top: 37px;
+}
+
+.senior-staff {
+  padding-top: 47px;
+}
+
+.library-director {
+  padding-top: 20px;
+  letter-spacing: 2px;
+}
+
+.phone-contacts {
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
 /*# sourceMappingURL=style.css.map */
