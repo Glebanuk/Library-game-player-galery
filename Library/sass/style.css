@@ -360,4 +360,67 @@ h4 {
   margin-top: 1px;
 }
 
+.shop__title {
+  margin-bottom: 45px;
+}
+
+.shop__descr {
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__title {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: Forum;
+  color: #BB945F;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.dessert-title {
+  text-align: end;
+}
+
+.drinks__list {
+  width: 438px;
+}
+
+.dessert-title {
+  width: 482px;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding-bottom: 40px;
+}
+
+.decoration-line {
+  display: inline-block;
+  width: 100px;
+  height: 1px;
+  background-color: #BB945F;
+  margin-right: 53px;
+  margin-left: auto;
+}
+.decoration-line__dessert {
+  margin-left: 60px;
+}
+
 /*# sourceMappingURL=style.css.map */
