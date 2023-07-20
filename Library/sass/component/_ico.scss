@@ -1,3 +1,22 @@
-.user_ico{
-    
+.ico_media{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+.ico_media-link{
+    margin-right: 10px;
+    &:last-child{
+        margin: 0;
+    }
+}
+.twiter{
+    background: url("../assets/icons/twiter_ico.svg") no-repeat;
+
+}
+.inst{
+    background:url("../assets/icons/inst_ico.svg") no-repeat;
+}
+.fb{
+    background:url("../assets/icons/fb_ico.svg") no-repeat;
+
 }

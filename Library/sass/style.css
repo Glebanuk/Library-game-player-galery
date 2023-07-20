@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -160,6 +161,31 @@ h4 {
   height: 1px;
   background-color: #0C0C0E;
   margin-top: 28px;
+}
+
+.ico_media {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.ico_media-link {
+  margin-right: 10px;
+}
+.ico_media-link:last-child {
+  margin: 0;
+}
+
+.twiter {
+  background: url("../assets/icons/twiter_ico.svg") no-repeat;
+}
+
+.inst {
+  background: url("../assets/icons/inst_ico.svg") no-repeat;
+}
+
+.fb {
+  background: url("../assets/icons/fb_ico.svg") no-repeat;
 }
 
 .wrapper {
@@ -496,6 +522,10 @@ h4 {
   text-transform: capitalize;
 }
 
+.library-cards {
+  padding-bottom: 42px;
+}
+
 .cards__title {
   margin-bottom: 15px;
 }
@@ -536,7 +566,7 @@ h4 {
   flex-direction: column;
   padding: 20px 20px 0px 17px;
   background-color: #BB945F;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .btn-card__container {
@@ -580,7 +610,102 @@ h4 {
   line-height: 40px;
   text-align: end;
   letter-spacing: 0.4px;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
+}
+
+.footer {
+  background-color: #0C0C0E;
+  color: #FFF;
+}
+
+.footer-location-schedule__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-link {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFF;
+  padding-top: 5px;
+}
+
+.location__text {
+  margin-bottom: 14px;
+}
+
+.working-schedule__block {
+  text-align: end;
+  padding-top: 12px;
+}
+
+.working-schedule__text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0px;
+}
+
+.footer__divided-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+}
+
+.media {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.copyright {
+  padding-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.copyright__text {
+  letter-spacing: 2px;
+}
+.copyright__text:nth-child(2) {
+  padding-left: 50px;
+}
+
+.gh_link {
+  color: #FFF;
+  text-decoration: underline;
+}
+.gh_link:hover {
+  color: #BB945F;
+}
+
+.ico_media {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.ico_media-link {
+  margin-right: 10px;
+}
+.ico_media-link:last-child {
+  margin: 0;
+}
+
+.twiter {
+  background: url("../assets/icons/twiter_ico.svg") no-repeat;
+}
+
+.inst {
+  background: url("../assets/icons/inst_ico.svg") no-repeat;
+}
+
+.fb {
+  background: url("../assets/icons/fb_ico.svg") no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */

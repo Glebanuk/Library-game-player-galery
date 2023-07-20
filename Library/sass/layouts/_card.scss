@@ -1,3 +1,6 @@
+.library-cards{
+    padding-bottom: 42px;
+}
 .cards__title{
     margin-bottom: 15px;
 }
@@ -27,7 +30,7 @@
     flex-direction: column;
     padding: 20px 20px 0px 17px;
     background-color: $color-primary;
-    margin-bottom: 20px  ;
+    margin-bottom: 24px;
 }
 .btn-card__container{
     text-align: center;
@@ -61,5 +64,5 @@
     line-height: 40px;
     text-align: end;
     letter-spacing: 0.4px;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }

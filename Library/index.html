@@ -19,11 +19,11 @@
 
                 <nav class="header__nav">
                     <ul class="navigation__list">
-                        <li class="nav__item"><a href="#" class="nav-item__link">About</a></li>
-                        <li class="nav__item"><a href="#" class="nav-item__link">Favorites</a></li>
-                        <li class="nav__item"><a href="" class="nav-item__link">Coffee shop</a></li>
-                        <li class="nav__item"><a href="" class="nav-item__link">Contacts</a></li>
-                        <li class="nav__item"><a href="" class="nav-item__link">Library Card</a></li>
+                        <li class="nav__item"><a href="#about" class="nav-item__link">About</a></li>
+                        <li class="nav__item"><a href="#favorites" class="nav-item__link">Favorites</a></li>
+                        <li class="nav__item"><a href="#shop" class="nav-item__link">Coffee shop</a></li>
+                        <li class="nav__item"><a href="#contacts" class="nav-item__link">Contacts</a></li>
+                        <li class="nav__item"><a href="#cards" class="nav-item__link">Library Card</a></li>
 
                     </ul>
                 </nav>
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="wrapper">
                 <h2 class="section__title about__title ">About <span class="title-underline"></span> </h2>
                 <p class="about__descr">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
@@ -73,7 +73,7 @@
                 </div>
             </div>
         </section>
-        <section class="favorites">
+        <section class="favorites" id="favorites">
             <div class="wrapper">
                     <h2 class="section__title favorites__title">Favorites <span class="title-underline"></span></h2>
                     <p class="favorite__text">Pick favorites of season</p>
@@ -310,7 +310,7 @@
                             </div>
                     </div>
             </section>
-            <section class="shop">
+            <section class="shop" id="shop">
                 <div class="wrapper">
                     <h2 class="section__title shop__title ">Coffee Shop <span class="title-underline"></span></h2>
                     <p class="shop__descr">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. 
@@ -344,7 +344,7 @@
                 </div>
 
             </section>
-            <section class="contacts">
+            <section class="contacts" id="contacts">
                 <div class="wrapper">
                     <h2 class="section__title contacts__title ">Our Contacts <span class="title-underline"></span></h2>
                     <div class="contacts__container">
@@ -363,7 +363,7 @@
                     </div>
                 </div>
             </section>
-            <section class="library-cards">
+            <section class="library-cards" id="cards">
                 <div class="wrapper">
 
                     <h2 class="section__title 
@@ -409,24 +409,27 @@
             <div class="wrapper">
                 <div class="footer__section">
 
-                    <div class="location__block">
-                        <p class="location__text">286 Cadman Plaza, New York, <br> NY 11238, United States</p>
-                    </div>
+                    <div class="footer-location-schedule__container">
+                        <div class="footer__location_media__block">
+                            <div class="location__block">
+                                <p class="location__text"> <a href="https://www.google.com/maps/place/286+Cadman+Plaza+E,+Brooklyn,+NY+11201,+%D0%A1%D0%A8%D0%90/@40.6956216,-73.9900944,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25a49ebbb4533:0x83b2f30fade7bf9f!8m2!3d40.6956216!4d-73.9900944?entry=ttu" target="_blank" class="location-link"> 286 Cadman Plaza, New York, <br> NY 11238, United States</a></p>
+                            </div>
 
-                    <div class="social">
-                        <span class="twiter"></span>
-                        <span class="inst"></span>
-                        <span class="FB"></span>
-                    </div>
+                            <div class="media">
+                                <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Dru" class="ico_media-link"><span class="twiter ico_media"></span></a>
+                                <a href="https://www.instagram.com/" class="ico_media-link"> <span class="inst ico_media"></span></a>
+                                <a href="https://uk-ua.facebook.com/" class="ico_media-link"><span class="fb ico_media"></span></a>
+                            </div>
+                        </div>
 
-                    <div class="working-schedule__block">
-                        <p class="working-schedule__text">Mon - Fri
-                            08:00 am - 07:00 pm</p>
-                        <p class="working-schedule__text">Sat - Sun
-                            10:00 am - 06:00 pm</p>
+                        <div class="working-schedule__block">
+                            <p class="working-schedule__text">Mon - Fri <br>
+                                08:00 am - 07:00 pm</p>
+                            <p class="working-schedule__text">Sat - Sun <br>
+                                10:00 am - 06:00 pm</p>
+                        </div>
                     </div>
-                    
-                    <span class="divided-line"></span>
+                    <span class="footer__divided-line"></span>
 
                     <div class="copyright">
                         <span class="copyright__text">2023</span>
