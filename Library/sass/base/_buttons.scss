@@ -1,9 +1,16 @@
 .btn{
-border: 1px solid $text-color-dark;
+outline: 1px solid #000;
 border-radius: 2px;
 cursor: pointer;
+border:none;
 
-&__buy{
+    &:hover{
+        background-color:$color-primary;
+        outline: 1px solid transparent ;
+
+    }
+
+    &__buy{
     @include font(1rem, normal, 700, normal);
     display: inline-block;
     letter-spacing: 1px;
@@ -13,16 +20,40 @@ cursor: pointer;
     margin-top: auto;
 
 }
-    &__buy:hover{
+    // &__buy:hover{
+    //     color:$color-primary;
+    //     border-color: $color-primary;
+    // }
+
+
+    &__own{
         color:$color-primary;
         border-color: $color-primary;
     }
 
+    &__card{
+    padding: 10px 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color:#FFFFFF;
 
-&__own{
-        color:$color-primary;
-        border-color: $color-primary;
+    }
+    // &__card:hover{
+    //     background-color:$color-primary;
+    // }
+
+    &__register{
+        @include font(1rem, normal, 700, normal);
+        letter-spacing: 1px;
         
+    }
+
+    &__sign{
+        padding: 8px 15px;
+    }
+    &__log{
+        padding: 8px 20px;
+        margin-left: 10px;
     }
 
 }

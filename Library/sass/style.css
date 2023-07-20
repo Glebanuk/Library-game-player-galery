@@ -43,9 +43,14 @@ h4 {
 }
 
 .btn {
-  border: 1px solid #000;
+  outline: 1px solid #000;
   border-radius: 2px;
   cursor: pointer;
+  border: none;
+}
+.btn:hover {
+  background-color: #BB945F;
+  outline: 1px solid transparent;
 }
 .btn__buy {
   font-size: 1rem;
@@ -59,13 +64,29 @@ h4 {
   width: 75px;
   margin-top: auto;
 }
-.btn__buy:hover {
-  color: #BB945F;
-  border-color: #BB945F;
-}
 .btn__own {
   color: #BB945F;
   border-color: #BB945F;
+}
+.btn__card {
+  padding: 10px 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: #FFFFFF;
+}
+.btn__register {
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+.btn__sign {
+  padding: 8px 15px;
+}
+.btn__log {
+  padding: 8px 20px;
+  margin-left: 10px;
 }
 
 .radio-btn__container {
@@ -473,6 +494,93 @@ h4 {
 .phone-contacts {
   letter-spacing: 2px;
   text-transform: capitalize;
+}
+
+.cards__title {
+  margin-bottom: 15px;
+}
+
+.digital-card__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.your-card-block__title {
+  font-size: 3rem;
+  line-height: normal;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.6;
+  text-align: center;
+}
+
+.card__title {
+  font-size: 3rem;
+  line-height: 5rem;
+  font-weight: 400;
+  font-style: normal;
+  font-family: Forum;
+  letter-spacing: 0.6px;
+  margin: 0px;
+  padding-bottom: 17px;
+}
+
+.your-card__border-block {
+  padding: 20px 15px 26px 20px;
+  border: 3px solid #BB945F;
+  box-shadow: 0px 4px 3px #8E8E8E;
+}
+
+.your-card__colored-block {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0px 17px;
+  background-color: #BB945F;
+  margin-bottom: 20px;
+}
+
+.btn-card__container {
+  text-align: center;
+}
+
+.input-field {
+  width: 520px;
+  height: 66px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 25px;
+}
+.input-field::placeholder {
+  font-size: 2.4rem;
+  line-height: 5rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.7px;
+  color: #8E8E8E;
+  padding-left: 15px;
+}
+
+.get-card__block {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.get-card__title {
+  font-size: 3rem;
+  line-height: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-family: Forum;
+  letter-spacing: 0.6px;
+  margin-bottom: 15px;
+}
+
+.get-card__descr {
+  line-height: 40px;
+  text-align: end;
+  letter-spacing: 0.4px;
+  margin-bottom: 35px;
 }
 
 /*# sourceMappingURL=style.css.map */
