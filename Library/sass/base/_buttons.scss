@@ -1,0 +1,154 @@
+.btn{
+outline: 1px solid #000;
+border-radius: 2px;
+cursor: pointer;
+border:none;
+
+    &:hover{
+        background-color:$color-primary;
+        outline: 1px solid transparent ;
+
+    }
+
+    &__buy{
+    @include font(1rem, normal, 700, normal);
+    display: inline-block;
+    letter-spacing: 1px;
+    color:$text-color-dark;
+    padding:8px 24px;
+    width: 75px;
+    margin-top: auto;
+
+}
+    // &__buy:hover{
+    //     color:$color-primary;
+    //     border-color: $color-primary;
+    // }
+
+
+    &__own{
+        color:$color-primary;
+        border-color: $color-primary;
+    }
+
+    &__card{
+    padding: 10px 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color:#FFFFFF;
+
+    }
+    // &__card:hover{
+    //     background-color:$color-primary;
+    // }
+
+    &__register{
+        @include font(1rem, normal, 700, normal);
+        letter-spacing: 1px;
+        
+    }
+
+    &__sign{
+        padding: 8px 15px;
+    }
+    &__log{
+        padding: 8px 20px;
+        margin-left: 10px;
+    }
+
+}
+// https://www.youtube.com/live/BJENQIX2e2o?feature=share&t=7571
+
+// Favorites buttons
+.radio-btn__container{
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  padding-bottom: 39px;
+
+
+}
+.radio__block{
+    position: relative;
+
+}
+
+.real-radio{
+    appearance: none;
+    position: absolute;
+    padding: 5px;
+
+}
+.label{
+        font-weight: 400;
+        padding: 5px 5px 5px 40px;
+        &:hover{
+            cursor: pointer;
+            }
+
+
+    &::before{
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: #ffff;
+        border: 2px solid #000000;
+        border-radius: 50%;
+
+        position: absolute;
+        top:15%;
+        left: 0;
+
+
+    }
+    &::after{
+        content: "";
+        display: block;
+        width: 7px;
+        height: 7px;
+        background: #000000;
+        border-radius: 50%;
+
+        position: absolute;
+        top:40%;
+        left: 4.5%;
+
+        display: none;
+    }
+  
+    
+}
+.real-radio:checked + .label::after{
+    display: block;
+}
+.real-radio:checked + .label  {
+            font-weight: 700;
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

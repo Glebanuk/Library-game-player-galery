@@ -1,0 +1,51 @@
+.about__descr{
+    text-align: center;
+    padding-bottom: 8px;
+}
+.slider__container img:nth-last-child(-n+2) {
+    display: none;
+  }
+  
+  .slider{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 33px;
+  }
+  .slider__indicators{
+    display: flex;
+    justify-content:center;
+
+    padding-bottom: 33px;
+  }
+  .indictor-container{
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .indicator{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    background-color: $text-color-dark;
+  
+&.active{
+    background-color: $color-primary;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

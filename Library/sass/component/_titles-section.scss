@@ -1,0 +1,20 @@
+.section__title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.welcome-title{
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.title-underline{
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #0C0C0E;
+    margin-top: 28px;
+}

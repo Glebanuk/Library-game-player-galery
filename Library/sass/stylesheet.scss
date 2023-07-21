@@ -1,0 +1,30 @@
+@import "abstract/_mixin";
+@import "abstract/_const";
+@import "abstract/_placeholder";
+
+@import "base/base";
+@import "base/_buttons";
+@import "base/_logo";
+
+
+
+@import "component/_titles-section";
+@import "component/_ico";
+
+
+
+
+@import "layouts/_wrapper";
+@import "layouts/_header";
+@import "layouts/_welcome";
+@import "layouts/_about";
+@import "layouts/_favorites";
+@import "layouts/_coffee-shop";
+@import "layouts/_contacts";
+@import "layouts/_card";
+@import "layouts/_footer";
+
+
+// components
+@import"component/_ico"
+
