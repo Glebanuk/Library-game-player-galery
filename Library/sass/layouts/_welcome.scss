@@ -1,8 +1,6 @@
 .welcome{
     position: relative;
-    background-image: url("../assets/welcome_BG.png") ;
-background-position: center;
-background-repeat: no-repeat;
+    background: url("../assets/welcome_BG.png") center/cover no-repeat ;
 width: 100%;
 padding-top: 220px;
 padding-bottom: 160px;

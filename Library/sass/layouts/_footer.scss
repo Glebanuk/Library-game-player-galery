@@ -11,6 +11,10 @@
     @include font(1.5rem, 2rem, 400,normal);
     color:$text-color-light;
     padding-top: 5px;
+
+    &:hover{
+        color:$color-primary;
+    }
 }
 .location__text{
     margin-bottom: 14px;
@@ -30,8 +34,9 @@
     background-color:$text-color-light;
 }
 .media{
-    display: inline-block;
+    display: flex;
     margin-bottom: 30px;
+    margin-top: 10px;
 }
 .copyright{
     padding-top: 45px;
@@ -39,16 +44,21 @@
     justify-content: space-between;
     padding-bottom: 30px;
 }
-.copyright__text{
+.copyright__link{
     letter-spacing: 2px;
+    color:$text-color-light;
     
+    &:hover{
+        color:$color-primary;
+    }
     &:nth-child(2){
         padding-left: 50px;
     }
 }
+
 .gh_link{
     color:$text-color-light;
-    text-decoration: underline;
+    
 
     &:hover{
         color:$color-primary;

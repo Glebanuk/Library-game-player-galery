@@ -155,6 +155,14 @@ h4 {
   margin-bottom: 50px;
 }
 
+.welcome-title {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .title-underline {
   display: block;
   width: 50px;
@@ -170,7 +178,7 @@ h4 {
 }
 
 .ico_media-link {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .ico_media-link:last-child {
   margin: 0;
@@ -242,9 +250,7 @@ h4 {
 
 .welcome {
   position: relative;
-  background-image: url("../assets/welcome_BG.png");
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("../assets/welcome_BG.png") center/cover no-repeat;
   width: 100%;
   padding-top: 220px;
   padding-bottom: 160px;
@@ -310,6 +316,7 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .indicator {
@@ -631,6 +638,9 @@ h4 {
   color: #FFF;
   padding-top: 5px;
 }
+.location-link:hover {
+  color: #BB945F;
+}
 
 .location__text {
   margin-bottom: 14px;
@@ -657,8 +667,9 @@ h4 {
 }
 
 .media {
-  display: inline-block;
+  display: flex;
   margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .copyright {
@@ -668,16 +679,19 @@ h4 {
   padding-bottom: 30px;
 }
 
-.copyright__text {
+.copyright__link {
   letter-spacing: 2px;
+  color: #FFF;
 }
-.copyright__text:nth-child(2) {
+.copyright__link:hover {
+  color: #BB945F;
+}
+.copyright__link:nth-child(2) {
   padding-left: 50px;
 }
 
 .gh_link {
   color: #FFF;
-  text-decoration: underline;
 }
 .gh_link:hover {
   color: #BB945F;
@@ -690,7 +704,7 @@ h4 {
 }
 
 .ico_media-link {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .ico_media-link:last-child {
   margin: 0;
