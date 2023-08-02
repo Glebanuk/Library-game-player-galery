@@ -10,6 +10,7 @@
 .menu__container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .menu__title{
     @include font(4rem, 4rem, normal, normal);

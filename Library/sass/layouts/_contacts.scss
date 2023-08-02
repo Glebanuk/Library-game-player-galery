@@ -9,6 +9,7 @@
 .contacts__container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .contact-blok__title, .library-director__link{
     @include font(2rem, 4rem, 700, normal);

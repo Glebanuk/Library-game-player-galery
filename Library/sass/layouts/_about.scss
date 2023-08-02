@@ -5,11 +5,15 @@
 .slider__container img:nth-last-child(-n+2) {
     display: none;
   }
-  
+
   .slider{
     display: flex;
     justify-content: space-between;
     padding-bottom: 33px;
+  }
+
+  .slider-img{
+    max-width: 32%;
   }
   .slider__indicators{
     display: flex;

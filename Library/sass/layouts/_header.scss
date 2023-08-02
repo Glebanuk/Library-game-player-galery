@@ -13,6 +13,9 @@
 .header__nav{
     margin-left: auto;
     padding-right: 43px;
+    @include media-laptop{
+        display: none;
+    }
 }
 .navigation__list{
     display: flex;

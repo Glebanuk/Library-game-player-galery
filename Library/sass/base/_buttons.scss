@@ -1,3 +1,19 @@
+.ico-profile__button{
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+    &:hover .user-ico__svg .logo-path {
+        fill: $color-primary;
+    }
+    @include media-laptop {
+        margin-left: auto;
+        padding: 0 68px 0 0;
+    }
+}
 .btn{
 outline: 1px solid #000;
 border-radius: 2px;
@@ -66,7 +82,9 @@ border:none;
   align-items: center;
   width: 50%;
   padding-bottom: 39px;
-
+@include media-laptop{
+    width: 100%;
+}
 
 }
 .radio__block{
@@ -106,8 +124,8 @@ border:none;
     &::after{
         content: "";
         display: block;
-        width: 7px;
-        height: 7px;
+        width: 10px;
+        height: 10px;
         background: #000000;
         border-radius: 50%;
 

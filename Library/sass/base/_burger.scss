@@ -1,0 +1,35 @@
+%burger-line {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    background-color: $text-color-light;
+};
+
+.burger{
+    display: none;
+    width: 45px;
+    height: 20px;
+     position:relative;
+
+@include media-laptop{
+    display:inline-block;
+}
+    &::before{
+        content:"";
+        @extend %burger-line;
+        top:calc(50% - 1px);
+        left: 0;
+    }
+
+    &::after{
+        content:"";
+        @extend %burger-line;
+        top:calc(100% - 1px);
+        left: 0;
+    }
+}
+
+.burger__line{
+   @extend %burger-line;
+}

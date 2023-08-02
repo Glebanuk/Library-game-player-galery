@@ -16,6 +16,10 @@
     flex-wrap: wrap;
     padding-right: 40px;
     row-gap: 40px;
+    column-gap: 35px;
+    @include media-laptop{
+        justify-content: center;
+    }
 }
 .spring,
 .summer,

@@ -7,6 +7,7 @@
 .digital-card__container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .your-card-block__title{
     @include font(3rem, normal, 400, normal);
