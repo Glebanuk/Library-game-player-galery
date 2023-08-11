@@ -5,14 +5,25 @@
     border: none;
     cursor: pointer;
     position: relative;
+    z-index: 3;
+
 
     &:hover .user-ico__svg .logo-path {
+
         fill: $color-primary;
+    }
+
+    .user-ico__svg .logo-path {
+        transition: fill 0.3s ease;
+
     }
     @include media-laptop {
         margin-left: auto;
         padding: 0 68px 0 0;
     }
+}
+.logo-path{
+    transition: fill 0.3s ease;;
 }
 .btn{
 outline: 1px solid #000;
