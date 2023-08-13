@@ -18,10 +18,18 @@
 }
 .location__text{
     margin-bottom: 14px;
+
+    @include media-tablet{
+        margin-top: 15px;
+    }
 }
 .working-schedule__block{
     text-align: end;
     padding-top: 12px;
+
+    @include media-tablet{
+        padding-top: 8px;
+    }
 }
 .working-schedule__text{
     @include font(1.5rem, 2rem, 400,normal);
@@ -64,4 +72,7 @@
         color:$color-primary;
     }
 
+    @include media-tablet{
+        padding-left: 30px;
+    }
 }

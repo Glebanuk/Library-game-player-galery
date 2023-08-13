@@ -4,6 +4,10 @@
 width: 100%;
 padding-top: 220px;
 padding-bottom: 160px;
+
+@include media-tablet{
+    background-position:center center
+}
 }
 .overlay{
     position: absolute;
