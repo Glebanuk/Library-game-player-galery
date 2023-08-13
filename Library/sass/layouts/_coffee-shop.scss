@@ -1,5 +1,14 @@
+@include media-tablet{
+.shop{
+    padding-bottom: 40px;
+}
+}
 .shop__title{
     margin-bottom: 45px;
+
+    @include media-tablet{
+        margin-bottom: 40px;
+    }
 }
 .shop__descr{
     text-align: center;
@@ -21,6 +30,12 @@
     margin-top: 20px;
     margin-bottom: 40px;
 }
+@include media-tablet{
+.deserts__block{
+    margin-left: auto;
+
+}
+}
 .dessert-title{
     text-align: end;
 }
@@ -38,6 +53,12 @@
     letter-spacing: 2px;
     text-transform: capitalize;
     padding-bottom: 40px;
+
+    @include media-tablet{
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
 }
 .decoration-line{
     display: inline-block;

@@ -25,66 +25,20 @@
 .logo-path{
     transition: fill 0.3s ease;;
 }
-.btn{
-outline: 1px solid #000;
-border-radius: 2px;
-cursor: pointer;
-border:none;
+// arrow slider dtn
+.slider__arrow-btn{
+    display: none;
 
-    &:hover{
-        background-color:$color-primary;
-        outline: 1px solid transparent ;
-
-    }
-
-    &__buy{
-    @include font(1rem, normal, 700, normal);
-    display: inline-block;
-    letter-spacing: 1px;
-    color:$text-color-dark;
-    padding:8px 24px;
-    width: 75px;
-    margin-top: auto;
-
+    @include media-tablet{
+        padding: 0;
+        margin-top: 43px;
+        display: inline-block;
+        background-color: transparent;
+        border: none;
+        align-self: center;
 }
-    // &__buy:hover{
-    //     color:$color-primary;
-    //     border-color: $color-primary;
-    // }
-
-
-    &__own{
-        color:$color-primary;
-        border-color: $color-primary;
-    }
-
-    &__card{
-    padding: 10px 40px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    background-color:#FFFFFF;
-
-    }
-    // &__card:hover{
-    //     background-color:$color-primary;
-    // }
-
-    &__register{
-        @include font(1rem, normal, 700, normal);
-        letter-spacing: 1px;
-        
-    }
-
-    &__sign{
-        padding: 8px 15px;
-    }
-    &__log{
-        padding: 8px 20px;
-        margin-left: 10px;
-    }
-
 }
-// https://www.youtube.com/live/BJENQIX2e2o?feature=share&t=7571
+
 
 // Favorites buttons
 .radio-btn__container{
@@ -95,6 +49,9 @@ border:none;
   padding-bottom: 39px;
 @include media-laptop{
     width: 100%;
+}
+@include media-tablet{
+    width: 97%;
 }
 
 }
@@ -155,6 +112,78 @@ border:none;
 .real-radio:checked + .label  {
             font-weight: 700;
           }
+
+
+.btn{
+outline: 1px solid #000;
+border-radius: 2px;
+cursor: pointer;
+border:none;
+
+    &:hover{
+        background-color:$color-primary;
+        outline: 1px solid transparent ;
+
+    }
+
+
+    &__buy{
+    @include font(1rem, normal, 700, normal);
+    display: inline-block;
+    letter-spacing: 1px;
+    color:$text-color-dark;
+    padding:8px 24px;
+    width: 75px;
+    margin-top: auto;
+
+}
+   
+
+    // &__buy:hover{
+    //     color:$color-primary;
+    //     border-color: $color-primary;
+    // }
+
+
+    &__own{
+        color:$color-primary;
+        border-color: $color-primary;
+        border-radius: 4px;
+    }
+   
+
+    &__card{
+    padding: 10px 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color:#FFFFFF;
+
+    }
+    // &__card:hover{
+    //     background-color:$color-primary;
+    // }
+
+    &__register{
+        @include font(1rem, normal, 700, normal);
+        letter-spacing: 1px;
+        
+    }
+
+    &__sign{
+        padding: 8px 15px;
+    }
+    &__log{
+        padding: 8px 20px;
+        margin-left: 10px;
+    }
+
+}
+.btn:active{
+    background-color:#675133;
+}
+// https://www.youtube.com/live/BJENQIX2e2o?feature=share&t=7571
+
+
 
 
 

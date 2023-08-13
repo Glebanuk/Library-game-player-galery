@@ -7,7 +7,15 @@
 .digital-card__container{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    
+
+    @include media-laptop{
+        flex-wrap: wrap;
+    }
+
+    @include media-tablet{
+        justify-content: center
+    }
 }
 .your-card-block__title{
     @include font(3rem, normal, 400, normal);
@@ -54,16 +62,31 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+
+    @include media-tablet{
+        align-items:center;
+    }
 }
 .get-card__title{
     @include font(3rem, normal, 400, normal);
     font-family: Forum;
     letter-spacing: 0.6px;
     margin-bottom: 15px;
+
+    @include media-tablet{
+        margin: 20px 0 ;
+        
+    }
 }
 .get-card__descr{
     line-height: 40px;
     text-align: end;
     letter-spacing: 0.4px;
     margin-bottom: 40px;
+    width: 456px;
+
+    @include media-tablet{
+        width: 600px;
+        text-align: center;
+    }
 }

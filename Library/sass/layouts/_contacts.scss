@@ -11,6 +11,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+@include media-tablet{
+    .contacts__block{
+        padding-bottom: 100px;
+    }
+}
 .contact-blok__title, .library-director__link{
     @include font(2rem, 4rem, 700, normal);
     letter-spacing: 2px;
@@ -44,4 +50,12 @@ margin: 0px;
 .phone-contacts{
 letter-spacing: 2px;
 text-transform: capitalize;
+}
+.map_img{
+    max-width: 100%;
+}
+@include media-tablet{
+    .map-img__container{
+        padding-left: 17px;
+    }
 }

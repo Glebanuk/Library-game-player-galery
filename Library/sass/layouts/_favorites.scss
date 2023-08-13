@@ -1,6 +1,6 @@
 
 .favorites{
-    padding-bottom: 34px;
+    padding-bottom: 40px;
 }
 .favorite__text{
     @include font(2.0rem, normal, 700, normal);
@@ -26,6 +26,8 @@
 .autumn{
     display: none;
 }
+
+
 .book__card{
     border: 1px solid #000;
     display: flex;
@@ -33,6 +35,10 @@
     position: relative;
     padding: 0 0 15px 16px;
     width: 550px;
+
+    @include media-tablet{
+        height: 555px;
+    }
 }
 .img-book{
 
