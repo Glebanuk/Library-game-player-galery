@@ -7,6 +7,7 @@
 .digital-card__container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     
 
     @include media-laptop{
