@@ -345,7 +345,7 @@ h4 {
   .header__nav {
     position: fixed;
     width: 330px;
-    height: 100vh;
+    height: 570px;
     top: 0;
     right: 0;
     background-color: #0C0C0E;
@@ -783,6 +783,7 @@ h4 {
 .digital-card__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 @media (max-width: 1023px) {
   .digital-card__container {
