@@ -54,3 +54,88 @@ console.log('Задание выполнено на 100% по всем пунк�
     });
 
 }())
+// slider -----------------------------------------------------------------------------------------
+
+const slider = document.querySelector(".slider");
+const indicators = document.querySelectorAll(".indicator");
+
+let currentIndex = 0;
+slider.style.left = `${-475 * currentIndex}px`;
+
+indicators.forEach((currentIndicator, index) => {
+    currentIndicator.addEventListener('click', () => {
+        currentIndex = index;
+        slider.style.left = `${-475 * currentIndex}px`;
+
+        indicators.forEach(otherIndicator => {
+            otherIndicator.classList.remove('active', 'no-hover');
+        });
+
+        currentIndicator.classList.add('active', 'no-hover');
+    });
+
+    if (index === currentIndex) {
+        currentIndicator.classList.add("active");
+    }
+});
+// pop-up authorithation profile------------------------------------
+
+const profileBtn = document.querySelector(".ico-profile__button");
+const profileMenu = document.querySelector(".auth__container");
+
+const handleClick = (event) => {
+    profileMenu.classList.toggle('open')
+}
+
+document.addEventListener('click', (event) =>{
+ if(!profileBtn.contains(event.target) && !profileMenu.contains(event.target)){
+    profileMenu.classList.remove('open');
+ }
+});
+
+profileBtn.addEventListener('click', handleClick);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -138,8 +138,8 @@ h4 {
   background: #000000;
   border-radius: 50%;
   position: absolute;
-  top: 40%;
-  left: 4.5%;
+  top: 34%;
+  left: 4%;
   display: none;
 }
 
@@ -318,6 +318,58 @@ h4 {
   background: url("../assets/icons/fb_ico.svg") no-repeat;
 }
 
+.auth__container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: -30px;
+  right: 24px;
+  z-index: 2;
+  width: 90px;
+  height: 115px;
+  background-color: #FFF;
+  visibility: hidden;
+}
+
+.profile__text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  margin-top: 0;
+}
+.profile__text::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #BB945F;
+  position: absolute;
+  left: 26%;
+  top: 10%;
+}
+
+.profile__btn {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 10px;
+  background-color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+.profile__btn:hover {
+  color: #BB945F;
+}
+
+.open {
+  visibility: visible;
+  transition: all 2s ease;
+}
+
 .wrapper {
   max-width: 1440px;
   padding: 0 20px;
@@ -459,21 +511,24 @@ h4 {
   }
 }
 
-.slider-img:nth-child(6),
-.slider-img:nth-child(5) {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .slider-img:nth-child(3),
   .slider-img:nth-child(4) {
     display: none;
   }
 }
+.slider__container {
+  overflow: hidden;
+}
+
 .slider {
   display: flex;
   justify-content: space-between;
   padding-bottom: 33px;
+  gap: 25px;
+  position: relative;
+  left: -475px;
+  transition: all 1s;
 }
 @media (max-width: 768px) {
   .slider {
@@ -498,32 +553,39 @@ h4 {
   padding-bottom: 33px;
 }
 
-.indictor-container {
+.indicator {
+  display: inline-flex;
   width: 26px;
   height: 26px;
-  display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.indictor-container:nth-last-child(-n+2) {
-  display: none;
-}
-@media (max-width: 768px) {
-  .indictor-container:nth-last-child(-n+2) {
-    display: flex;
-  }
-}
-
-.indicator {
-  display: inline-block;
+.indicator::before {
+  content: "";
   width: 16px;
   height: 16px;
   border-radius: 50px;
   background-color: #000;
 }
-.indicator.active {
+.indicator.active::before {
   background-color: #BB945F;
+}
+.indicator.active.no-hover::before {
+  background-color: #BB945F;
+  transition: none;
+}
+.indicator:hover::before {
+  background-color: #e4cfb1;
+  transition: all 0.2s;
+}
+.indicator:nth-last-child(-n+2) {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .indicator:nth-last-child(-n+2) {
+    display: inline-flex;
+  }
 }
 
 .favorites {
