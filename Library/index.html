@@ -52,20 +52,7 @@
     </header>
     <main>
          <section class="welcome">
-                <!-- pop up start -->
 
-                    <div class="auth__container">
-                        <p class="profile__text">Profile</p>
-                        <button class="profile__btn log-in__btn"> Log In</button>
-                        <button class="profile__btn register__btn">Register</button>
-                    </div>
-
-            <!-- <div class="auth__container">
-                <p class="profile__text">Profile</p>
-                <button class="profile__btn log-in__btn"> My profile</button>
-                <button class="profile__btn register__btn">Log Out</button>
-            </div> -->
-                <!-- pop up end -->
             <h2 class="welcome-title">Brooklyn Library</h2>
             <div class="wrapper">
                 <div class="overlay"></div>
@@ -78,9 +65,9 @@
             <div class="wrapper">
                 <h2 class="section__title about__title ">About <span class="title-underline"></span> </h2>
                 <p class="about__descr">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
-                
+
                 <div class="slider__container">
-                    
+
                     <div class="slider">
 
                         <button class="slider__arrow-btn btn-left">
@@ -430,7 +417,7 @@
                                         <input type="text" placeholder="Card number " class="input-field">
                                     </div>
                                     <div class="btn-card__container">
-                                        <button class="btn__card btn">Check the card</button>
+                                        <button type="button"  class="btn__card btn">Check the card</button>
                                     </div>
                                     </form>
                                 </div>
@@ -441,7 +428,7 @@
                                     <p class="get-card__descr">You will be able to see a reader card after    logging into account or you can register a new    account</p>
 
                                     <div class="get-card__btn-block">
-                                        <button class="btn__register btn__sign btn">Sign Up</button>
+                                        <button class="btn__register btn__sign btn register__btn">Sign Up</button>
                                         <button class="btn__register btn__log btn">Log in</button>
                                     </div>
                                 </div>
@@ -491,7 +478,47 @@
 
 
 
+ <!-- pop up start ---------------------------------------------------------------------------------------->
+        <!-- profile -->
+ <div class="auth__container">
+    <p class="profile__text">Profile</p>
+    <button class="profile__btn log-in__btn"> Log In</button>
+    <button class="profile__btn register__btn">Register</button>
+</div>
 
+<!-- register -->
+    <div class="pop-up__body register">
+        <div class="pop-up__content">
+            <button class="close-register-btn"></button>
+            <h4 class="register-title">REGISTER</h4>
+            <form action="/" class="register-form">
+                <div class="input-control">
+                    <label for="first-name" class="label-text-register">First name</label>
+                    <input id="first-name-input"  type="text" name="first-name" >
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="last-name" class="label-text-register">Last name</label>
+                    <input id="last-name-input"  type="text" name="last-name" >
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="email" class="label-text-register">E-mail</label>
+                    <input id="email-input-register"  type="text" name="email" >
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password" class="label-text-register">Password</label>
+                    <input id="password-register" type="password" name="password" >
+                    <div class="error"></div>
+                </div>
+                <button class="btn__register btn__sign btn" type="submit">Sign Up</button>
+            </form>
+            <span class="register-modal__descr">Already have an account? <button class="register-btn-login">Login</button></span>
+
+        </div>
+    </div>
+<!-- pop up end -->
 <script src="./index.js"></script>
 </body>
 
