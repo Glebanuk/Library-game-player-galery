@@ -184,19 +184,22 @@ h4 {
   letter-spacing: 1px;
   background-color: #FFFFFF;
 }
-.btn__register {
+.btn__sign {
+  padding: 8px 15px;
+  margin-right: 10px;
   font-size: 1rem;
   line-height: normal;
   font-weight: 700;
   font-style: normal;
   letter-spacing: 1px;
 }
-.btn__sign {
-  padding: 8px 15px;
-}
 .btn__log {
   padding: 8px 20px;
-  margin-left: 10px;
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 1px;
 }
 
 .btn:active {
@@ -370,7 +373,7 @@ h4 {
   transition: all 2s ease;
 }
 
-.pop-up__body {
+.pop-up__body__register, .pop-up__body__login {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,7 +403,7 @@ h4 {
   padding-left: 25px;
 }
 
-.close-register-btn {
+.close-modal-btn {
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -410,7 +413,7 @@ h4 {
   border: none;
   background-color: #FFF;
 }
-.close-register-btn::before {
+.close-modal-btn::before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -422,7 +425,7 @@ h4 {
   transform: translate(-50%, -50%);
   transform: rotate(45deg);
 }
-.close-register-btn::after {
+.close-modal-btn::after {
   content: "";
   display: inline-block;
   width: 20px;
@@ -496,6 +499,14 @@ h4 {
 }
 .register-btn-login:hover {
   color: #BB945F;
+}
+
+.pop-up-login__content {
+  position: relative;
+  width: 250px;
+  height: 262px;
+  background-color: #FFF;
+  padding-top: 9px;
 }
 
 .wrapper {

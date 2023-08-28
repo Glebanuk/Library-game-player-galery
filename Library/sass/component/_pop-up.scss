@@ -11,7 +11,7 @@
   }
 
 
-// Authorisation menu
+// Authorisation menu--------------------------------------------------------------------------------------
 .auth__container{
     position: absolute;
     display: flex;
@@ -57,9 +57,9 @@
     visibility:visible;
     transition: all 2s ease;
 }
-// Register menu
+// Register menu-------------------------------------------------------------------------------------
 
-.pop-up__body{
+.pop-up__body__register, .pop-up__body__login {
 display: flex;
 justify-content: center;
 align-items:center;
@@ -81,12 +81,12 @@ align-items:center;
     height: 382px;
     background-color:$text-color-light;
     padding-top: 9px;
-    
+
 }
 .register-form{
     padding-left: 25px;
 }
-.close-register-btn{
+.close-modal-btn{
     cursor: pointer;
     width: 20px;
     height: 20px;
@@ -167,4 +167,12 @@ align-items:center;
     &:hover{
         color:$color-primary;
     }
+}
+// login--------------------------------------------------------------------------------------------
+.pop-up-login__content{
+    position: relative;
+    width: 250px;
+    height: 262px;
+    background-color:$text-color-light;
+    padding-top: 9px;
 }

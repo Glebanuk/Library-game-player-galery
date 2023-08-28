@@ -163,18 +163,18 @@ border:none;
     //     background-color:$color-primary;
     // }
 
-    &__register{
-        @include font(1rem, normal, 700, normal);
-        letter-spacing: 1px;
-        
-    }
+   
 
     &__sign{
         padding: 8px 15px;
+        margin-right: 10px;
+        @include font(1rem, normal, 700, normal);
+        letter-spacing: 1px;
     }
     &__log{
         padding: 8px 20px;
-        margin-left: 10px;
+        @include font(1rem, normal, 700, normal);
+        letter-spacing: 1px;
     }
 
 }

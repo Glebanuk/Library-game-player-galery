@@ -1,17 +1,29 @@
 console.log('Задание выполнено на 100% по всем пунктам требований\nоцениваю работу в 50 баллов');
-// pop-up links-------------------------------------------------------------------------------
+// ----------------------------------------------------------pop-up links-------------------------------------------------------------------------------
 const profileBtn = document.querySelector(".ico-profile__button");
 const profileMenu = document.querySelector(".auth__container");
 
+const loginBtn = document.querySelectorAll(".log-in__btn");
+const loginContainer = document.querySelector(".pop-up__body__login");
+const loginForm = document.querySelector('.pop-up__body__login .register-form');
+const loginContent = document.querySelector(".pop-up-login__content");
+
+const modalCloseBtn = document.querySelectorAll(".close-modal-btn");
+
+
 const registerBtn = document.querySelectorAll(".register__btn");
-const registerContainer = document.querySelector(".pop-up__body");
-const registerCloseBtn = document.querySelector(".close-register-btn");
+const registerForm = document.querySelectorAll(".register-form");
+const registerContainer = document.querySelector(".pop-up__body__register");
 const registerContent = document.querySelector(".pop-up__content");
-const registerUsername =document.getElementById('first-name-input');
-const registerLastname =document.getElementById('last-name-input');
-const registerEmail =document.getElementById('email-input-register');
-const registerPassword = document.getElementById('password-register');
-const registerForm = document.querySelector(".register-form");
+const registerUsername =document.querySelector('.first-name-input');
+const registerLastname =document.querySelector('.last-name-input');
+const registerEmail =document.querySelector('.email-input-register');
+const registerPassword = document.querySelector('.password-register');
+const resettableFields = registerContainer.querySelectorAll('.reset-form input');
+
+// -----------------------------------------------favorities links---------------------------------
+const buyBtn = document.querySelectorAll(".btn__buy");
+
 
 
 // burger------------------------------------------------------------------------------------------
@@ -96,7 +108,7 @@ indicators.forEach((currentIndicator, index) => {
 
 slider();
 
-// POP-UP --------------------------------------------------------------------------------------
+// ------------------------------- -----------------------------------------POP-UP----------------------------------------------
 //  authorithation profile--------------
 function setupProfileMenu() {
 
@@ -112,36 +124,78 @@ document.addEventListener('click', (event) =>{
 
 profileBtn.addEventListener('click', handleClick);
     }
+    setupProfileMenu();
 
-setupProfileMenu();
-// register modal window----------------------------------------
-function registerMenu(){
+// modal window----------------------------------------
+function modalMenu(){
     
-//                 ---open\close modal---
+    //                 ---open\close modal---
+   
+
+function toggleModal(container, profileMenu) {
+    container.classList.toggle('open-register');
+    profileMenu.classList.remove('open');
+}
+function resetField(container) {
+    const resettableFields = container.querySelectorAll('.reset-form input');
+    resettableFields.forEach(field => {
+        field.value = '';
+    });
+}
+
 registerBtn.forEach(btn =>{
-    btn.addEventListener('click', () => {
-        registerContainer.classList.toggle('open-register');
-        profileMenu.classList.toggle('open')
+    btn.addEventListener('click',  () =>{
+         toggleModal (registerContainer, profileMenu)
     })
 })
-    registerCloseBtn.addEventListener('click', () =>{
-        registerContainer.classList.toggle('open-register');
-        registerForm.reset();
+loginBtn.forEach(btn =>{
+    btn.addEventListener('click',  () =>{
+         toggleModal (loginContainer, profileMenu)
     })
+})
+modalCloseBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (registerContainer.classList.contains('open-register')) {
+            toggleModal(registerContainer, profileMenu);
+            resetField(registerContainer);
+
+        } else if (loginContainer.classList.contains('open-register')) {
+            toggleModal(loginContainer, profileMenu);
+            resetField(loginContainer);
+
+        }
+    });
+});
+
 
     registerContainer.addEventListener('click', (event) =>{
         if(!registerContent.contains(event.target) ){
             registerContainer.classList.toggle('open-register');
-            registerForm.reset();
-        }
-       });
-//                ----inputs behavior------------
+            resetField(registerContainer);
 
-registerForm.addEventListener('submit', e =>{
+        }
+});
+
+
+
+    loginContainer.addEventListener('click', (event) =>{
+        if(!loginContent.contains(event.target) ){
+            loginContainer.classList.toggle('open-register');
+            resetField(loginContainer);
+
+        }
+});
+
+
+//                ----inputs behavior------------
+registerForm.forEach(form => {
+    form.addEventListener('submit', e =>{
     e.preventDefault();
 
     validateInputs();
-})
+    });
+});
+
 
 const setError = (element, message) =>{
     const inputControl = element.parentElement;
@@ -202,10 +256,58 @@ const isValidEmail = email => {
 
 
 }
+modalMenu();
 
- registerMenu();
 
+// login modal window----------------------------------------
 
+function loginMenu() {
+
+loginForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs(loginForm);
+});
+
+function setError(element, message) {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+}
+
+function setSuccess(element) {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add("success");
+    inputControl.classList.remove('error');
+}
+
+function validateInputs(form) {
+    const emailValue = form.querySelector('.email-input-register').value.trim();
+    const passwordValue = form.querySelector('.password-register').value.trim();
+
+    if (emailValue === '') {
+        setError(form.querySelector('.email-input-register'), "Email is required");
+    } else {
+        setSuccess(form.querySelector('.email-input-register'));
+    }
+
+    if (passwordValue === '') {
+        setError(form.querySelector('.password-register'), 'Password is required');
+    } else if (passwordValue.length < 8) {
+        setError(form.querySelector('.password-register'), 'At least 8 symbols');
+    } else {
+        setSuccess(form.querySelector('.password-register'));
+    }
+}
+
+}
+loginMenu();
 
 
 
