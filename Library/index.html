@@ -35,7 +35,7 @@
                         <span class="burger-nav__close-line"></span>
                     </div>
                 </nav>
-                <!-- <img src="./assets/icons/user_ico.svg" alt="profile"  class=" ico user_ico"> -->
+                
 
                 <button class="ico-profile__button">
                         <?xml version="1.0" encoding="iso-8859-1"?>
@@ -44,6 +44,7 @@
                         <path class="logo-path" fill-rule="evenodd" clip-rule="evenodd" d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z" fill="white"/>
                         </svg>
                 </button>
+                
                 <span class="burger">
                     <span class="burger__line"></span>
                 </span>
@@ -51,6 +52,7 @@
     </header>
     <main>
          <section class="welcome">
+
             <h2 class="welcome-title">Brooklyn Library</h2>
             <div class="wrapper">
                 <div class="overlay"></div>
@@ -63,9 +65,9 @@
             <div class="wrapper">
                 <h2 class="section__title about__title ">About <span class="title-underline"></span> </h2>
                 <p class="about__descr">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
-                
+
                 <div class="slider__container">
-                    
+
                     <div class="slider">
 
                         <button class="slider__arrow-btn btn-left">
@@ -91,24 +93,16 @@
                         </button>
 
                     </div>
+
                 </div>
 
                 <div class="slider__indicators">
-                    <div class="indictor-container">
-                        <span class="indicator active first-indicator "></span>
-                    </div>
-                    <div class="indictor-container">
-                        <span class="indicator  second-indicator "></span>
-                    </div>
-                    <div class="indictor-container">
-                        <span class="indicator  third-indicator "></span>
-                    </div>
-                    <div class="indictor-container">
-                        <span class="indicator  fourth-indicator "></span>
-                    </div>
-                    <div class="indictor-container">
-                        <span class="indicator  fift-indicator "></span>
-                    </div>
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+
 
                 </div>
             </div>
@@ -176,7 +170,7 @@
                                     <img src="./assets/favorites/winter/book_dante.png" alt="book" class="img-book">
                                     <button class="btn__buy btn"> Buy</button>
                                 </div>
-
+                                
                                 <div class="book__card">
                                     <p class="card-text">Staff Picks</p>
                                     <h3 class="book__name">The Last Queen
@@ -185,12 +179,14 @@
                                     <p class="book__descr">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
 
                                     <img src="./assets/favorites/winter/book_queen.png" alt="book" class="img-book">
-                                    <button class="btn__buy btn__own " disabled> Own</button>
+                                    
+                                    <button class="btn__buy btn"> Buy</button>
+                                    <!-- <button class="btn__buy btn__own " disabled> Own</button> -->
                                 </div>
 
                             </div>
 
-                        <div class="favorites__section spring">
+                        <div class="favorites__section spring hidden">
 
                             <div class="book__card">
                                     <p class="card-text">Staff Picks</p>
@@ -221,10 +217,10 @@
                                     </h3>
 
                                     <h3 class="book__author">By Alexandra Chang</h3>
-                                    <p class="bdes__buycr">A sardonic view of Silicon Valley culture, a meditation on race, and a journal of displacement and belonging, all in one form-defying package of spare prose.</p>
+                                    <p class="book__descr">A sardonic view of Silicon Valley culture, a meditation on race, and a journal of displacement and belonging, all in one form-defying package of spare prose.</p>
 
                                     <img src="./assets/favorites/spring/book_distraction.png" alt="book" class="img-book">
-                                    <button class="buy__btn btn"> Buy</button>
+                                    <button class="btn__buy btn"> Buy</button>
                                 </div>
 
                                 <div class="book__card">
@@ -236,11 +232,12 @@
                                     <p class="book__descr">A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
 
                                     <img src="./assets/favorites/spring/book_dominicana.png" alt="book" class="img-book">
-                                    <button class="btn__buy btn__own "> Own</button>
+                                    <button class="btn__buy btn"> Buy</button>
+                                    <!-- <button class="btn__buy btn__own "> Own</button> -->
                                 </div>
 
                             </div>
-                        <div class="favorites__section summer">
+                        <div class="favorites__section summer hidden">
 
                             <div class="book__card">
                                     <p class="card-text">Staff Picks</p>
@@ -294,7 +291,7 @@
                                 </div>
 
                             </div>
-                        <div class="favorites__section autumn">
+                        <div class="favorites__section autumn hidden">
 
                             <div class="book__card">
                                     <p class="card-text">Staff Picks</p>
@@ -318,7 +315,7 @@
                                     <p class="book__descr">The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide</p>
 
                                     <img src="./assets/favorites/autumn/book_fire.png" alt="book" class="img-book">
-                                    <button class="btn__buy "> Buy</button>
+                                    <button class="btn__buy btn"> Buy</button>
                                 </div>
 
                                 <div class="book__card">
@@ -353,7 +350,7 @@
             <section class="shop" id="shop">
                 <div class="wrapper">
                     <h2 class="section__title shop__title ">Coffee Shop <span class="title-underline"></span></h2>
-                    <p class="shop__descr">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. 
+                    <p class="shop__descr">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.
                         you can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
 
                         <div class="menu__container">
@@ -423,7 +420,7 @@
                                         <input type="text" placeholder="Card number " class="input-field">
                                     </div>
                                     <div class="btn-card__container">
-                                        <button class="btn__card btn">Check the card</button>
+                                        <button type="button"  class="btn__card btn">Check the card</button>
                                     </div>
                                     </form>
                                 </div>
@@ -434,8 +431,8 @@
                                     <p class="get-card__descr">You will be able to see a reader card after    logging into account or you can register a new    account</p>
 
                                     <div class="get-card__btn-block">
-                                        <button class="btn__register btn__sign btn">Sign Up</button>
-                                        <button class="btn__register btn__log btn">Log in</button>
+                                        <button class=" btn__sign btn register__btn register">Sign Up</button>
+                                        <button class=" btn__log btn  log-in__btn">Log in</button>
                                     </div>
                                 </div>
                             </div>
@@ -484,7 +481,70 @@
 
 
 
+ <!-- pop up start ---------------------------------------------------------------------------------------->
+        <!-- profile -->
+ <div class="auth__container">
+    <p class="profile__text">Profile</p>
+    <button class="profile__btn log-in__btn"> Log In</button>
+    <button class="profile__btn register__btn">Register</button>
+</div>
 
+<!-- register -->
+    <div class="pop-up__body__register register">
+        <div class="pop-up__content">
+            <button class="close-modal-btn"></button>
+            <h4 class="register-title">REGISTER</h4>
+            <form action="/" class="register-form reset-form">
+                <div class="input-control">
+                    <label for="first-name" class="label-text-register">First name</label>
+                    <input class="first-name-input"  type="text" name="first-name" >
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="last-name" class="label-text-register">Last name</label>
+                    <input class="last-name-input"  type="text" name="last-name" >
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="email" class="label-text-register">E-mail</label>
+                    <input class="email-input-register"  type="text" name="email" >
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password" class="label-text-register">Password</label>
+                    <input class="password-register" type="password" name="password" >
+                    <div class="error"></div>
+                </div>
+                <button class="btn__register btn__sign btn" type="submit">Sign Up</button>
+            </form>
+            <span class="register-modal__descr">Already have an account? <button class="register-btn-login">Login</button></span>
+
+        </div>
+    </div>
+    <!-- login -->
+    <div class="pop-up__body__login">
+        <div class="pop-up-login__content">
+            <button class="close-modal-btn"></button>
+            <h4 class="register-title">LOGIN</h4>
+            <form action="/" class="register-form reset-form">
+                <div class="input-control">
+                    <label for="email" class="label-text-register">E-mail or readers card</label>
+                    <input class="email-input-register"  type="text" name="email" >
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password" class="label-text-register">Password</label>
+                    <input class="password-register" type="password" name="password" >
+                    <div class="error"></div>
+                </div>
+                <button class="btn__log btn" type="submit">Log in</button>
+                </form>
+                <span class="register-modal__descr">Dont have an account? <button class="register-btn-login">Register</button></span>
+
+        </div>
+
+    </div>
+<!-- pop up end -->
 <script src="./index.js"></script>
 </body>
 

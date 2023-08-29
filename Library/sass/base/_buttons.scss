@@ -5,7 +5,7 @@
     border: none;
     cursor: pointer;
     position: relative;
-    z-index: 3;
+    z-index: 2;
 
 
     &:hover .user-ico__svg .logo-path {
@@ -98,8 +98,8 @@
         border-radius: 50%;
 
         position: absolute;
-        top:40%;
-        left: 4.5%;
+        top:34%;
+        left: 4%;
 
         display: none;
     }
@@ -163,18 +163,18 @@ border:none;
     //     background-color:$color-primary;
     // }
 
-    &__register{
-        @include font(1rem, normal, 700, normal);
-        letter-spacing: 1px;
-        
-    }
+   
 
     &__sign{
         padding: 8px 15px;
+        margin-right: 10px;
+        @include font(1rem, normal, 700, normal);
+        letter-spacing: 1px;
     }
     &__log{
         padding: 8px 20px;
-        margin-left: 10px;
+        @include font(1rem, normal, 700, normal);
+        letter-spacing: 1px;
     }
 
 }

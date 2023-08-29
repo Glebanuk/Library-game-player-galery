@@ -10,8 +10,8 @@
 .favorites__title{
     margin-bottom: 41px;
 }
-.favorites__section{
-    display: flex;
+.favorites__section {
+    display: none; /* Скроем все секции по умолчанию */
     justify-content: space-between;
     flex-wrap: wrap;
     padding-right: 40px;
@@ -21,11 +21,30 @@
         justify-content: center;
     }
 }
-.spring,
-.summer,
-.autumn{
-    display: none;
+
+.winter {
+    display: flex; /* Отобразим только секцию с классом .winter */
+    opacity: 1; /* Сделаем непрозрачность полной при отображении */
+    visibility: visible; /* Покажем секцию */
+    transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out; /* Анимация */
 }
+
+// .spring.hidden,
+// .summer.hidden,
+// .autumn.hidden {
+//   display: none;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out;
+// }
+
+
+
+
+
+
+
+
 
 
 .book__card{
@@ -35,6 +54,7 @@
     position: relative;
     padding: 0 0 15px 16px;
     width: 550px;
+    height: 555px;
 
     @include media-tablet{
         height: 555px;
