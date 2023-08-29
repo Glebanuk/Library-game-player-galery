@@ -8,10 +8,10 @@
       margin-bottom: 30px;
     }
 }
-.slider-img:nth-child(6),
-.slider-img:nth-child(5){
-    display: none;
-}
+// .slider-img:nth-child(6),
+// .slider-img:nth-child(5){
+//     // display: none;
+// }
     @include media-tablet{
       .slider-img:nth-child(3),
       .slider-img:nth-child(4){
@@ -19,10 +19,18 @@
       }
     }
 
+    .slider__container{
+      overflow: hidden;
+
+    }
   .slider{
     display: flex;
     justify-content: space-between;
     padding-bottom: 33px;
+    gap: 25px;
+    position: relative;
+    left: -475px;
+    transition: all 1s;
 
     @include media-tablet{
       justify-content: center;
@@ -46,35 +54,93 @@
 
     padding-bottom: 33px;
   }
-  .indictor-container{
+  
+  .indicator {
+    display: inline-flex;
     width: 26px;
     height: 26px;
-    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    
 
+    
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 50px;
+      background-color: $text-color-dark;
 
-    &:nth-last-child(-n+2){
-      display: none;
+  }
+  &.active {
+    &::before {
+      background-color: $color-primary;
+      
+    }
 
-      @include media-tablet{
-        display: flex;
+    &.no-hover {
+      &::before {
+        background-color: $color-primary;
+        
+        transition: none;
       }
     }
   }
-  .indicator{
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50px;
-    background-color: $text-color-dark;
-  
-&.active{
-    background-color: $color-primary;
-}
+    &:hover {
+      &::before{
+      background-color: #e4cfb1;
+      transition: all .2s;
+    }
+  }
+  &:nth-last-child(-n+2){
+      display: none;
 
-}
+      @include media-laptop {
+        display: inline-flex;
+      }
+  }
+ 
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Slider animation------------------------------------------->
+
+// @keyframes move-right {
+//   from{left: -475px;}
+//   to{left: -950px;}
+// }
+// .transition-right{
+//   animation-name: move-right;
+//   animation-duration: 2s;
+//   animation-fill-mode: both;
+// }
+
+// @keyframes move-left {
+//   from{left: -475px;}
+//   to{left: 0px;}
+// }
+// .transition-left{
+//   animation-name: move-left;
+//   animation-duration: 5s;
+//   animation-fill-mode: both;
+ 
+// }
+
+
 
 
 
