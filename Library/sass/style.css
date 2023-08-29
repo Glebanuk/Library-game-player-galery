@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -744,7 +745,7 @@ h4 {
 }
 
 .favorites__section {
-  display: flex;
+  display: none; /* Скроем все секции по умолчанию */
   justify-content: space-between;
   flex-wrap: wrap;
   padding-right: 40px;
@@ -757,10 +758,11 @@ h4 {
   }
 }
 
-.spring,
-.summer,
-.autumn {
-  display: none;
+.winter {
+  display: flex; /* Отобразим только секцию с классом .winter */
+  opacity: 1; /* Сделаем непрозрачность полной при отображении */
+  visibility: visible; /* Покажем секцию */
+  transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out; /* Анимация */
 }
 
 .book__card {
@@ -770,6 +772,7 @@ h4 {
   position: relative;
   padding: 0 0 15px 16px;
   width: 550px;
+  height: 555px;
 }
 @media (max-width: 768px) {
   .book__card {

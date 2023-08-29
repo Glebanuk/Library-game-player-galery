@@ -80,7 +80,7 @@ const buyBtn = document.querySelectorAll(".btn__buy");
     });
 
 }())
-// slider -----------------------------------------------------------------------------------------
+// slider about-----------------------------------------------------------------------------------------
 function slider() {
 const slider = document.querySelector(".slider");
 const indicators = document.querySelectorAll(".indicator");
@@ -107,6 +107,37 @@ indicators.forEach((currentIndicator, index) => {
 }
 
 slider();
+
+// -------------------------------------slider favorite-------------------------------------------------------
+const radioButtons = document.querySelectorAll('.real-radio');
+const sections = document.querySelectorAll('.favorites__section');
+
+// При загрузке страницы покажем только первую секцию .winter
+document.querySelector('.winter').style.display = 'flex';
+
+radioButtons.forEach(radio => {
+  radio.addEventListener('change', (event) => {
+    const selectedSectionId = event.target.id.toLowerCase();
+    
+    // Сначала скроем все секции
+    sections.forEach(section => {
+      section.style.display = 'none';
+    });
+    
+    // Потом отобразим выбранную секцию с анимацией
+    const selectedSection = document.querySelector(`.${selectedSectionId}`);
+    selectedSection.style.display = 'flex';
+  });
+});
+
+
+
+
+
+
+
+
+
 
 // ------------------------------- -----------------------------------------POP-UP----------------------------------------------
 //  authorithation profile--------------
