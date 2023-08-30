@@ -1,25 +1,5 @@
-console.log('Задание выполнено на 100% по всем пунктам требований\nоцениваю работу в 50 баллов');
-// ----------------------------------------------------------pop-up links-------------------------------------------------------------------------------
-const profileBtn = document.querySelector(".ico-profile__button");
-const profileMenu = document.querySelector(".auth__container");
-
-const loginBtn = document.querySelectorAll(".log-in__btn");
-const loginContainer = document.querySelector(".pop-up__body__login");
-const loginForm = document.querySelector('.pop-up__body__login .register-form');
-const loginContent = document.querySelector(".pop-up-login__content");
-
-const modalCloseBtn = document.querySelectorAll(".close-modal-btn");
 
 
-const registerBtn = document.querySelectorAll(".register__btn");
-const registerForm = document.querySelectorAll(".register-form");
-const registerContainer = document.querySelector(".pop-up__body__register");
-const registerContent = document.querySelector(".pop-up__content");
-const registerUsername =document.querySelector('.first-name-input');
-const registerLastname =document.querySelector('.last-name-input');
-const registerEmail =document.querySelector('.email-input-register');
-const registerPassword = document.querySelector('.password-register');
-const resettableFields = registerContainer.querySelectorAll('.reset-form input');
 
 // -----------------------------------------------favorities links---------------------------------
 const buyBtn = document.querySelectorAll(".btn__buy");
@@ -130,15 +110,27 @@ radioButtons.forEach(radio => {
   });
 });
 
+// ----------------------------------------------------------pop-up links-------------------------------------------------------------------------------
+const profileBtn = document.querySelector(".ico-profile__button");
+const profileMenu = document.querySelector(".auth__container");
+
+const loginBtn = document.querySelectorAll(".log-in__btn");
+const loginContainer = document.querySelector(".pop-up__body__login");
+const loginForm = document.querySelector('.pop-up__body__login .register-form');
+const loginContent = document.querySelector(".pop-up-login__content");
+
+const modalCloseBtn = document.querySelectorAll(".close-modal-btn");
 
 
-
-
-
-
-
-
-
+const registerBtn = document.querySelectorAll(".register__btn");
+const registerForm = document.querySelectorAll(".register-form");
+const registerContainer = document.querySelector(".pop-up__body__register");
+const registerContent = document.querySelector(".pop-up__content");
+const registerUsername =document.querySelector('.first-name-input');
+const registerLastname =document.querySelector('.last-name-input');
+const registerEmail =document.querySelector('.email-input-register');
+const registerPassword = document.querySelector('.password-register');
+const resettableFields = registerContainer.querySelectorAll('.reset-form input');
 // ------------------------------- -----------------------------------------POP-UP----------------------------------------------
 //  authorithation profile--------------
 function setupProfileMenu() {
@@ -339,12 +331,42 @@ function validateInputs(form) {
 
 }
 loginMenu();
+// =============================================================Local storage=============================================
+const registrationForm = document.getElementById("registration-form");
+const formFields = registrationForm.elements;
+const submitBtn = registrationForm.querySelector('[type="submit"]');
+const userIcon = document.getElementById('userIcon');
 
 
 
+registrationForm.addEventListener("submit", function(event) {
+    event.preventDefault();
 
+    const userData = {};
 
+    for(const field of formFields){
+        if (field.type !== "submit"){
+            userData[field.name] = field.value;
+        }
 
+    }
+    registerContainer.classList.toggle('open-register');
+
+localStorage.setItem("user", JSON.stringify(userData));
+registrationForm.reset();
+
+// user ico change
+
+const firstNameChart = document.querySelector('.first-name-input').value;
+const lastNameChart = document.querySelector('.last-name-input').value;
+const initial = (firstNameChart.charAt(0) + lastNameChart.charAt(0)).toUpperCase();
+
+userIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <path d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14Z" fill="white"/>
+        <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="15" fill="#BB945F" font-family="Inter" font-weight="400">TT</text>
+    </svg>`;
+})
+// ----------------------------change ico after register-----------------------------
 
 
 
