@@ -11,6 +11,7 @@
     margin-bottom: 41px;
 }
 .favorites__section {
+    
     display: none; /* Скроем все секции по умолчанию */
     justify-content: space-between;
     flex-wrap: wrap;
@@ -28,24 +29,6 @@
     visibility: visible; /* Покажем секцию */
     transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out; /* Анимация */
 }
-
-// .spring.hidden,
-// .summer.hidden,
-// .autumn.hidden {
-//   display: none;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out;
-// }
-
-
-
-
-
-
-
-
-
 
 .book__card{
     border: 1px solid #000;
