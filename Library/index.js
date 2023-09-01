@@ -131,6 +131,8 @@ const registerLastname =document.querySelector('.last-name-input');
 const registerEmail =document.querySelector('.email-input-register');
 const registerPassword = document.querySelector('.password-register');
 const resettableFields = registerContainer.querySelectorAll('.reset-form input');
+const registerInputControls = registerForm[0].querySelectorAll('.input-control');
+
 // ------------------------------- -----------------------------------------POP-UP----------------------------------------------
 //  authorithation profile--------------
 function setupProfileMenu() {
@@ -240,11 +242,14 @@ const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
-  const validateInputs = () =>{
-    const usernameValue = registerUsername.value.trim();
-    const lastnameValue =  registerLastname.value.trim();
-    const emailValue = registerEmail.value.trim();
-    const passwordValue = registerPassword.value.trim();
+
+//  ------  VALIDATION INPUTS\ LOCAL STORAGE\ CHANGE USER ICO ON LETTERS---
+const validateInputs = () =>{
+      const usernameValue = registerUsername.value.trim();
+      const lastnameValue =  registerLastname.value.trim();
+      const emailValue = registerEmail.value.trim();
+      const passwordValue = registerPassword.value.trim();
+      const userIcon = document.getElementById('userIcon')
 
     if(usernameValue === ''){
         setError(registerUsername, "First name is required");
@@ -274,12 +279,56 @@ const isValidEmail = email => {
         setSuccess(registerPassword)
     }
 
+    // close modal if fields are true \   
+    let allFieldsSuccess = true;
+
+    for (const registerInputControl of registerInputControls ){
+        if (!registerInputControl.classList.contains("success")){
+            allFieldsSuccess = false;
+            break;
+        }
+    }
+    // add data to local storage-----------------------------------------------
+    if (allFieldsSuccess) {
+
+        const userData = {
+            username: usernameValue,
+            lastname: lastnameValue,
+            email: emailValue,
+            password: passwordValue,
+        };
+
+    localStorage.setItem("userData", JSON.stringify(userData));
+
+    registerUsername.value = "";
+    registerLastname.value = "";
+    registerEmail.value = "";
+    registerPassword.value = "";
+
+    // changing ico SVG-------------------
+
+    const initials = (usernameValue.charAt(0) + lastnameValue.charAt(0)).toUpperCase();
+
+    userIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <path d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14Z" fill="white"/>
+    <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="15" fill="#BB945F" font-family="Inter" font-weight="400">${initials}</text>
+</svg>`;
+
+
+
+    registerContainer.classList.remove("open-register");
+    }
+
 
   };
 
 
+
+
 }
+
 modalMenu();
+
 
 
 // login modal window----------------------------------------
@@ -332,41 +381,36 @@ function validateInputs(form) {
 }
 loginMenu();
 // =============================================================Local storage=============================================
-const registrationForm = document.getElementById("registration-form");
-const formFields = registrationForm.elements;
-const submitBtn = registrationForm.querySelector('[type="submit"]');
-const userIcon = document.getElementById('userIcon');
 
 
 
-registrationForm.addEventListener("submit", function(event) {
-    event.preventDefault();
 
-    const userData = {};
 
-    for(const field of formFields){
-        if (field.type !== "submit"){
-            userData[field.name] = field.value;
-        }
 
-    }
-    registerContainer.classList.toggle('open-register');
 
-localStorage.setItem("user", JSON.stringify(userData));
-registrationForm.reset();
 
-// user ico change
 
-const firstNameChart = document.querySelector('.first-name-input').value;
-const lastNameChart = document.querySelector('.last-name-input').value;
-const initial = (firstNameChart.charAt(0) + lastNameChart.charAt(0)).toUpperCase();
 
-userIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <path d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14Z" fill="white"/>
-        <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="15" fill="#BB945F" font-family="Inter" font-weight="400">TT</text>
-    </svg>`;
-})
-// ----------------------------change ico after register-----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
