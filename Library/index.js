@@ -152,6 +152,8 @@ profileBtn.addEventListener('click', handleClick);
     setupProfileMenu();
 
 // modal window----------------------------------------
+
+
 function modalMenu(){
     
     //                 ---open\close modal---
@@ -212,12 +214,14 @@ modalCloseBtn.forEach(btn => {
 });
 
 
-//                ----inputs behavior------------
+//                ----inputs behavior & layout appearence after success register------------
 registerForm.forEach(form => {
     form.addEventListener('submit', e =>{
     e.preventDefault();
 
-    validateInputs();
+    const isValid = validateInputs();
+
+
     });
 });
 
@@ -250,53 +254,52 @@ const validateInputs = () =>{
       const emailValue = registerEmail.value.trim();
       const passwordValue = registerPassword.value.trim();
       const userIcon = document.getElementById('userIcon')
+      let isValid = true;
 
     if(usernameValue === ''){
         setError(registerUsername, "First name is required");
+        isValid = false;
     }else{
         setSuccess(registerUsername);
     }
 
     if(lastnameValue === ''){
         setError(registerLastname, "Last name is required");
+        isValid = false;
     }else{
         setSuccess(registerLastname);
     }
 
     if(emailValue === '') {
         setError(registerEmail, "Email is required");
+        isValid = false;
     }else if (!isValidEmail(emailValue)) {
         setError(registerEmail, "Enter a valid email");
+        isValid = false;
     }else {
         setSuccess(registerEmail);
     }
 
     if(passwordValue === ''){
         setError(registerPassword, 'Password is required');
+        isValid = false;
     }else if (passwordValue.length < 8){
         setError(registerPassword, 'At least 8 symbols');
+        isValid = false;
     }else{
         setSuccess(registerPassword)
     }
 
     // close modal if fields are true \   
-    let allFieldsSuccess = true;
-
-    for (const registerInputControl of registerInputControls ){
-        if (!registerInputControl.classList.contains("success")){
-            allFieldsSuccess = false;
-            break;
-        }
-    }
-    // add data to local storage-----------------------------------------------
-    if (allFieldsSuccess) {
-
+    if (isValid) {
+        // Если все поля корректны, выполняем следующие действия и возвращаем true
         const userData = {
             username: usernameValue,
             lastname: lastnameValue,
             email: emailValue,
             password: passwordValue,
         };
+    // add data to local storage-----------------------------------------------
 
     localStorage.setItem("userData", JSON.stringify(userData));
 
@@ -316,7 +319,8 @@ const validateInputs = () =>{
 
 
 
-    registerContainer.classList.remove("open-register");
+registerContainer.classList.remove("open-register");
+return isValid;
     }
 
 
@@ -328,10 +332,10 @@ const validateInputs = () =>{
 }
 
 modalMenu();
-
-
-
 // login modal window----------------------------------------
+
+
+
 
 function loginMenu() {
 
@@ -380,7 +384,7 @@ function validateInputs(form) {
 
 }
 loginMenu();
-// =============================================================Local storage=============================================
+// =============================================================changing layout after register =============================================
 
 
 
