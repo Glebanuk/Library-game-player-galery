@@ -133,6 +133,8 @@ const registerPassword = document.querySelector('.password-register');
 const resettableFields = registerContainer.querySelectorAll('.reset-form input');
 const registerInputControls = registerForm[0].querySelectorAll('.input-control');
 
+const userCardContainer = document.querySelector(".digital-card__container");
+
 // ------------------------------- -----------------------------------------POP-UP----------------------------------------------
 //  authorithation profile--------------
 function setupProfileMenu() {
@@ -152,6 +154,8 @@ profileBtn.addEventListener('click', handleClick);
     setupProfileMenu();
 
 // modal window----------------------------------------
+
+
 function modalMenu(){
     
     //                 ---open\close modal---
@@ -212,12 +216,69 @@ modalCloseBtn.forEach(btn => {
 });
 
 
-//                ----inputs behavior------------
+//                ----inputs behavior & layout appearence after success register------------
 registerForm.forEach(form => {
     form.addEventListener('submit', e =>{
     e.preventDefault();
 
-    validateInputs();
+    const isValid = validateInputs();
+        if(isValid){
+            userCardContainer.innerHTML = `<div class="digital-card__container">
+
+            <div class="your-card__block">
+                <p class="your-card-block__title">Your Library card</p>
+
+                <div class="your-card__border-block">
+                    <form  class="form-input">
+
+                        <div class="your-card__colored-block">
+                            <h3 class="card__title">Brooklyn Public Library</h3>
+                            <input type="text"  class="input-field">
+                            <input type="text"  class="input-field">
+                        </div>
+
+                        <ul class="user-badges__container">
+                            <li class="user-badge__item">
+                                <span class="badge-title">Visits</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 10C13.2614 10 15.5 7.76142 15.5 5C15.5 2.23858 13.2614 0 10.5 0C7.73858 0 5.5 2.23858 5.5 5C5.5 7.76142 7.73858 10 10.5 10ZM17.5711 13.9289C19.4464 15.8043 20.5 18.3478 20.5 21H10.5L0.5 21C0.5 18.3478 1.55357 15.8043 3.42893 13.9289C5.3043 12.0536 7.84784 11 10.5 11C13.1522 11 15.6957 12.0536 17.5711 13.9289Z" fill="#BB945F"/>
+                                  </svg>
+                                <span class="badge__counter">0</span>
+                            </li>
+                            <li class="user-badge__item">
+                                <span class="badge-title">Bonuses</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                    <path d="M10 0L12.2249 3.31001L15.8779 2.00532L15.8249 6.05634L19.5106 7.25532L17.2 10.5L19.5106 13.7447L15.8249 14.9437L15.8779 18.9947L12.2249 17.69L10 21L7.77508 17.69L4.12215 18.9947L4.17508 14.9437L0.489435 13.7447L2.8 10.5L0.489435 7.25532L4.17508 6.05634L4.12215 2.00532L7.77508 3.31001L10 0Z" fill="#BB945F"/>
+                                  </svg>
+                                  <span class="badge__counter">1204</span>
+                            </li>
+                            <li class="user-badge__item">
+                                <span class="badge-title">Books</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                    <rect width="20" height="21" fill="#BB945F"/>
+                                    <rect x="2" width="1" height="19" fill="#826844"/>
+                                    <rect x="1" width="1" height="21" fill="white"/>
+                                  </svg>
+                                  <span class="badge__counter">0</span>
+                            </li>
+                            
+                        </ul>
+                        </form>
+                    </div>
+                </div>
+
+                    <div class="get-card__block">
+                        <h3 class="get-card__title">Visit your profile</h3>
+                        <p class="get-card__descr">With a digital library card you get free access to the Library’s wide array of digital resources including e-books, databases, educational resources, and more.</p>
+
+                        <div class="get-card__btn-block">
+                        
+                            <button class=" btn__log btn  profile__button">Profile</button>
+                        </div>
+                    </div>
+                </div>`;
+        }
+
     });
 });
 
@@ -250,53 +311,52 @@ const validateInputs = () =>{
       const emailValue = registerEmail.value.trim();
       const passwordValue = registerPassword.value.trim();
       const userIcon = document.getElementById('userIcon')
+      let isValid = true;
 
     if(usernameValue === ''){
         setError(registerUsername, "First name is required");
+        isValid = false;
     }else{
         setSuccess(registerUsername);
     }
 
     if(lastnameValue === ''){
         setError(registerLastname, "Last name is required");
+        isValid = false;
     }else{
         setSuccess(registerLastname);
     }
 
     if(emailValue === '') {
         setError(registerEmail, "Email is required");
+        isValid = false;
     }else if (!isValidEmail(emailValue)) {
         setError(registerEmail, "Enter a valid email");
+        isValid = false;
     }else {
         setSuccess(registerEmail);
     }
 
     if(passwordValue === ''){
         setError(registerPassword, 'Password is required');
+        isValid = false;
     }else if (passwordValue.length < 8){
         setError(registerPassword, 'At least 8 symbols');
+        isValid = false;
     }else{
         setSuccess(registerPassword)
     }
 
     // close modal if fields are true \   
-    let allFieldsSuccess = true;
-
-    for (const registerInputControl of registerInputControls ){
-        if (!registerInputControl.classList.contains("success")){
-            allFieldsSuccess = false;
-            break;
-        }
-    }
-    // add data to local storage-----------------------------------------------
-    if (allFieldsSuccess) {
-
+    if (isValid) {
+        // Если все поля корректны, выполняем следующие действия и возвращаем true
         const userData = {
             username: usernameValue,
             lastname: lastnameValue,
             email: emailValue,
             password: passwordValue,
         };
+    // add data to local storage-----------------------------------------------
 
     localStorage.setItem("userData", JSON.stringify(userData));
 
@@ -316,7 +376,8 @@ const validateInputs = () =>{
 
 
 
-    registerContainer.classList.remove("open-register");
+registerContainer.classList.remove("open-register");
+return isValid;
     }
 
 
@@ -328,10 +389,10 @@ const validateInputs = () =>{
 }
 
 modalMenu();
-
-
-
 // login modal window----------------------------------------
+
+
+
 
 function loginMenu() {
 
@@ -380,7 +441,7 @@ function validateInputs(form) {
 
 }
 loginMenu();
-// =============================================================Local storage=============================================
+// =============================================================changing layout after register =============================================
 
 
 
