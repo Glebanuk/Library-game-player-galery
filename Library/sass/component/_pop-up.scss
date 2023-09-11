@@ -24,6 +24,10 @@
     background-color: #FFF;
     visibility: hidden;
 }
+.open{
+    visibility:visible;
+    transition: all 2s ease;
+}
 .profile__text{
     @include font(1.5rem, 2rem, 700, normal);
     text-align: center;
@@ -53,10 +57,9 @@
         color: $color-primary;
     }
 }
-.open{
-    visibility:visible;
-    transition: all 2s ease;
-}
+
+
+
 // Register menu-------------------------------------------------------------------------------------
 
 .pop-up__body__register, .pop-up__body__login {
