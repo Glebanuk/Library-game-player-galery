@@ -69,12 +69,16 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
+    animation:rotate 10s infinite linear;
+    animation-play-state: paused;
     
 
 }
 .rotate{
-    animation:rotate 10s infinite linear;
+    animation-play-state: running;
+
 }
+
 .disk::after{
     content: "";
     width: 30px;
@@ -168,7 +172,7 @@ button:hover{
 }
 
 .btn-play.pause span:nth-child(2){
-    transform: translateY(-50%) scaleY(0);
+    transform: translateY(0%) scaleY(0);
 }
 .btn-play.pause span:first-child{
     width: 35%;
