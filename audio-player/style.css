@@ -1,0 +1,152 @@
+/* font-family: 'Forum', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+body{
+    margin: 0 auto;
+    
+    
+}
+.wrapper{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.info p{
+    font-size: 30px;
+    color: rgb(215, 218, 211);
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+
+}
+.info h1{
+    /* font-family: ; */
+    font-size: 40px;
+    color: rgb(127 144 153);
+    text-transform: uppercase;
+}
+.wrapper::before {
+    content: "";
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/img/Holiday Playlist.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); 
+    z-index: -1; 
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 400px;
+    height: 470px;
+    background: url(./assets/img/Holiday\ Playlist.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 60px;
+    border: 5px solid rgb(233, 212, 212);
+}
+.disk{
+    width: 260px;
+    height: 260px;
+    position: relative;
+    top: -40px;
+    display: block;
+    border-radius: 50%;
+    background: url(./assets/img/Holiday\ Playlist.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.disk::after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:black;
+}
+
+.song-slider{
+    width: 90%;
+    position: relative;
+}
+.seek-bar{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius:10px;
+    background-color:rgba(211, 211, 255, 0.89);
+    cursor: pointer;
+    overflow: hidden;
+}
+.seek-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 8px;
+    height: 16px;
+    border-radius:5px;
+    background-color:rgb(32, 31, 31);
+    box-shadow: -400px 0 0 400px rgba(105, 86, 86, 0.842);
+   
+}
+.current-time,
+.duration-time{
+    font-size: 20px;
+    color:aliceblue;
+}
+.duration-time{
+    position: absolute;
+    right: 0;
+}
+button{
+    cursor:pointer;
+}
+.btn-play{
+    position: relative;
+    width: 41px;
+    height: 41px;
+    border-radius: 30%;
+    border:none;
+}
+.btn-play:hover{
+    background-color: rgba(253, 252, 252, 0.712);
+}
+.btn-play span{
+    position: absolute;
+    width: 7px;
+    height: 21px;
+    left: 24%;
+    top:25%;
+    border-radius: 5px;
+    background-color: rgba(105, 86, 86, 0.842);
+    transition: .5s;
+    clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+}
+.btn-play span:nth-child(2){
+    left: 60%;
+    transform-origin:center ;
+}
+
+.btn-play.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+.btn-play.pause span:first-child{
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%, 0%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);}

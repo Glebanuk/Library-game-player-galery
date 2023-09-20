@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet">
     <title>Audio-player</title>
 </head>
 <body>
-    
+    <div class="wrapper" >
+        <div class="container">
+            <div class="disk"></div>
+
+            <div class="info">
+                <h1 class="Artist">Испольнитель</h1>
+                 <p class="song-name">название</p>
+            </div>
+
+            <div class="song-slider">
+                <input type="range" value="0" class="seek-bar">
+                <span class="current-time">00:00</span>
+                <span class="duration-time">00:00</span>
+            </div>
+
+                <div class="btn-controll">
+                    <button class="btn-prev">
+                        
+                        
+                    </button>
+                    <button class="btn-play">
+                        <span ></span>
+                        <span></span>
+                    </button>
+                    <button class="btn-next">
+                        
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
