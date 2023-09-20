@@ -112,8 +112,20 @@ body{
     position: absolute;
     right: 0;
 }
+
+
+
+.btn-controll{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 button{
     cursor:pointer;
+}
+
+button:hover{
+    background-color: rgba(253, 252, 252, 0.712);
 }
 .btn-play{
     position: relative;
@@ -122,9 +134,7 @@ button{
     border-radius: 30%;
     border:none;
 }
-.btn-play:hover{
-    background-color: rgba(253, 252, 252, 0.712);
-}
+
 .btn-play span{
     position: absolute;
     width: 7px;
@@ -149,4 +159,22 @@ button{
     left: 53%;
     transform: translate(-50%, 0%);
     border-radius: 0;
-    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);}
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.btn-switch{
+    display: inline-flex;
+    align-items:center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    border-radius: 30%;
+    border:none;
+}
+.btn-switch svg{
+    width: 20px;
+    height: 20px;
+
+}
+
