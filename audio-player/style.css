@@ -43,12 +43,13 @@ body{
     z-index: -1; 
 }
 
-.container{
+.player{
     display: flex;
     flex-direction: column;
     align-items:center;
+    gap: 10px;
     width: 400px;
-    height: 470px;
+    height: 510px;
     background: url(./assets/img/Holiday\ Playlist.jpg);
     background-size: cover;
     background-position: center;
@@ -68,6 +69,11 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
+    
+
+}
+.rotate{
+    animation:rotate 10s infinite linear;
 }
 .disk::after{
     content: "";
@@ -79,8 +85,17 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color:black;
+   
+    
 }
-
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 .song-slider{
     width: 90%;
     position: relative;
@@ -126,6 +141,7 @@ button{
 
 button:hover{
     background-color: rgba(253, 252, 252, 0.712);
+
 }
 .btn-play{
     position: relative;
@@ -177,4 +193,26 @@ button:hover{
     height: 20px;
 
 }
+.volume-btn{
+   background-color: transparent;
+   border: none;
+   width: 15px;
+   height: 15px;
+}
 
+.volume-btn svg:hover path{
+fill: rgba(161, 145, 145, 0.8);
+}
+
+.volume-btn:hover{
+    background-color:transparent;
+}
+
+
+.volume-controll{
+    display: flex;
+    width: 20%;
+    gap: 10px;
+    flex-direction: column;
+    align-items:center
+}
