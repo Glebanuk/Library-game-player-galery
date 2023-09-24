@@ -49,10 +49,8 @@ nextBtn.addEventListener("click", () =>{
 
 prevBtn.addEventListener("click", () =>{
     if(currentSong <= songs.length -1){
-        currentSong = 0;
-    }else{
         currentSong--;
-    }
+    };
     setMusic (currentSong);
     playBtn.click();
 })

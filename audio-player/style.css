@@ -225,20 +225,24 @@ fill: rgba(161, 145, 145, 0.8);
     flex-direction: column;
     align-items:center
 }
+.footer{
+    display: flex;
+    align-self: end;
+    gap: 20px
+}
 .rs-link{
-    position: absolute;
-    top: 83%;
+    display: inline-flex;
+    align-self:end;
 }
 .rs-ico{
     width: 100px;
     height: 100px;
 }
 .git-link{
+    display: inline-flex;
+  align-self:center;
     font-size: 30px;
-    position: absolute;
-    right: 28px;
-    bottom: 36px;
-    color: black;
+    color: wheat;
 }
 .git-link:hover{
     color:brown;
