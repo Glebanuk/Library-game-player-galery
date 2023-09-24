@@ -4,8 +4,19 @@ font-family: 'Poppins', sans-serif; */
 
 body{
     margin: 0 auto;
+ 
     
-    
+}
+.bg-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/img/HolidayPlaylist.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); 
+    z-index: -1;
 }
 .wrapper{
     display: flex;
@@ -14,6 +25,12 @@ body{
     align-items: center;
     height: 100vh;
     width: 100%;
+    /* background-image: url('./assets/img/Holiday Playlist.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(8px);  */
+    /* z-index: -1; */
 }
 .info p{
     font-size: 30px;
@@ -28,20 +45,7 @@ body{
     color: rgb(127 144 153);
     text-transform: uppercase;
 }
-.wrapper::before {
-    content: "";
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('./assets/img/Holiday Playlist.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(8px); 
-    z-index: -1; 
-}
+
 
 .player{
     display: flex;
@@ -56,6 +60,7 @@ body{
     background-repeat: no-repeat;
     border-radius: 60px;
     border: 5px solid rgb(233, 212, 212);
+   
 }
 .disk{
     width: 260px;
@@ -164,7 +169,7 @@ button:hover{
     border-radius: 5px;
     background-color: rgba(105, 86, 86, 0.842);
     transition: .5s;
-    clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+    /* clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%); */
 }
 .btn-play span:nth-child(2){
     left: 60%;
@@ -219,4 +224,22 @@ fill: rgba(161, 145, 145, 0.8);
     gap: 10px;
     flex-direction: column;
     align-items:center
+}
+.rs-link{
+    position: absolute;
+    top: 83%;
+}
+.rs-ico{
+    width: 100px;
+    height: 100px;
+}
+.git-link{
+    font-size: 30px;
+    position: absolute;
+    right: 28px;
+    bottom: 36px;
+    color: black;
+}
+.git-link:hover{
+    color:brown;
 }
