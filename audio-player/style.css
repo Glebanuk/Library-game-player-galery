@@ -1,6 +1,3 @@
-/* font-family: 'Forum', cursive;
-font-family: 'Inter', sans-serif;
-font-family: 'Poppins', sans-serif; */
 
 body{
     margin: 0 auto;
@@ -17,6 +14,7 @@ body{
     background-repeat: no-repeat;
     filter: blur(8px); 
     z-index: -1;
+    transition: background-image 0.5s ease-in-out;
 }
 .wrapper{
     display: flex;
@@ -25,12 +23,6 @@ body{
     align-items: center;
     height: 100vh;
     width: 100%;
-    /* background-image: url('./assets/img/Holiday Playlist.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(8px);  */
-    /* z-index: -1; */
 }
 .info p{
     font-size: 30px;
@@ -60,7 +52,8 @@ body{
     background-repeat: no-repeat;
     border-radius: 60px;
     border: 5px solid rgb(233, 212, 212);
-   
+    transition: background-image 0.5s ease-in-out;
+
 }
 .disk{
     width: 260px;
@@ -76,7 +69,8 @@ body{
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
     animation:rotate 10s infinite linear;
     animation-play-state: paused;
-    
+    transition: background-image 0.5s ease-in-out;
+
 
 }
 .rotate{
@@ -152,6 +146,13 @@ button:hover{
     background-color: rgba(253, 252, 252, 0.712);
 
 }
+.btn.pause{
+    position: relative;
+    width: 41px;
+    height: 41px;
+    border-radius: 30%;
+    border:none;
+}
 .btn-play{
     position: relative;
     width: 41px;
@@ -160,7 +161,7 @@ button:hover{
     border:none;
 }
 
-.btn-play span{
+.btn span{
     position: absolute;
     width: 7px;
     height: 21px;
@@ -171,7 +172,7 @@ button:hover{
     transition: .5s;
     /* clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%); */
 }
-.btn-play span:nth-child(2){
+.btn span:nth-child(2){
     left: 60%;
     transform-origin:center ;
 }
@@ -225,20 +226,24 @@ fill: rgba(161, 145, 145, 0.8);
     flex-direction: column;
     align-items:center
 }
+.footer{
+    display: flex;
+    align-self: end;
+    gap: 20px
+}
 .rs-link{
-    position: absolute;
-    top: 83%;
+    display: inline-flex;
+    align-self:end;
 }
 .rs-ico{
     width: 100px;
     height: 100px;
 }
 .git-link{
+    display: inline-flex;
+  align-self:center;
     font-size: 30px;
-    position: absolute;
-    right: 28px;
-    bottom: 36px;
-    color: black;
+    color: wheat;
 }
 .git-link:hover{
     color:brown;
