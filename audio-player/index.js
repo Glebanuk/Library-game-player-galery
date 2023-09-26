@@ -56,15 +56,13 @@ nextBtn.addEventListener("click", () =>{
 
 
 prevBtn.addEventListener("click", () => {
-    if (currentSong >= songs.length - 1) {
+    if (currentSong > 0) {
         currentSong--;
+    }else{
+        currentSong = songs.length - 1;
     }
 
-    // if (currentSong === 0) {
-    //     prevBtn.setAttribute("disabled", "disabled");
-    // } else {
-    //     prevBtn.removeAttribute("disabled");
-    // }
+    
 
     setMusic(currentSong);
     playBtn.click();
@@ -75,7 +73,7 @@ prevBtn.addEventListener("click", () => {
 
 function setMusic (i) {
     seekBar.value = 0;
-    let song = songs[i];
+    let song = songs[i]; // переменная массива
 
     currentSong = i;
     music.src = song.path;
