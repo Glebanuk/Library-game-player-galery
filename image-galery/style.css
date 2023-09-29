@@ -28,12 +28,18 @@ h1::before{
 }
 .clean-icon{
     font-family: 'FontAwesome';
+    color: #00ff22;
     position: absolute;
     font-weight: 400;
     top: 10%;
     right: 14px;
     cursor: pointer;
-
+    transition: all 0.3s;
+ display: none;   
+   
+}
+.clean-icon:hover{
+    color: #0dca26;
 }
 .input{
     border: none;

@@ -1,5 +1,7 @@
 const input = document.getElementById("input");
 const images = document.querySelectorAll(".image");
+const deleteBtn = document.querySelector(".clean-icon");
+console.log(deleteBtn);
 
 
 
@@ -46,6 +48,19 @@ window.addEventListener("load", () =>{
     
 })
 
+function showDeleteBtn () {
+    if(input.value !== ""){
+        deleteBtn.style.display = "block";
+    }else{
+        deleteBtn.style.display = "none"
+    }
 
+}
+input.addEventListener("input", showDeleteBtn);
 
+deleteBtn.addEventListener("click", (e) =>{
+    if(input.value !== ""){
+        input.value = ""
+    }
+})
 
