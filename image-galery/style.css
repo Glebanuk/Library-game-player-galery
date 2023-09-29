@@ -76,3 +76,31 @@ main{
     border-radius: 5px;
     margin: 5px;
 }
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items:center
+}
+.rs-ico{
+    width: 100px;
+    height: 100px;
+    transition: all 0.6s;
+}
+.rs-ico:hover{
+    scale: 1.1;
+}
+
+.git-link{
+    display: inline-flex;
+  align-self:center;
+    font-size: 30px;
+    color: wheat;
+    transition: all 0.3s;
+}
+.git-link:hover{
+    color: #0dca26;
+}
+.year p{
+    font-size: 30px;
+    color: wheat;
+}
