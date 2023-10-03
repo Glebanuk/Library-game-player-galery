@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+height: 100vh;
+background: linear-gradient(7deg, rgba(53,143,144,1) 0%, rgba(80,120,74,0.3897934173669467) 67%);
+
+}
+
+.game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.wall{
+    position: relative;
+    height: 100%;
+    width: 50px;
+    background-color: black;
+    left: 400px;
+    animation: wallMove 7s infinite linear;
+
+}
+@keyframes wallMove{
+    0%{
+        left: 400px;
+    }
+    100%{
+        left: -50px;
+    }
+}
+.hole{
+    position: relative;
+    top: -500px;
+    width: 50px;
+    height: 100px;
+    background-color: rgb(233, 255, 188);
+    animation: wallMove 7s infinite linear;
+
+}
