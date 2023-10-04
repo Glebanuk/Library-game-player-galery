@@ -15,16 +15,28 @@ background: linear-gradient(7deg, rgba(53,143,144,1) 0%, rgba(80,120,74,0.389793
     border: 1px solid black;
     margin: 10px auto;
     overflow: hidden;
+    background: url("./assets/bg.jpg")no-repeat;
+    background-size: cover;
 }
 .wall{
     position: relative;
     height: 100%;
     width: 50px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     left: 400px;
-    animation: wallMove 7s infinite linear;
+    animation: wallMove 2s infinite linear;
+}
+.hole{
+    position: relative;
+    top: -500px;
+    width: 50px;
+    height: 100px;
+    left: 400px;
+    background-color: rgb(188, 255, 255);
+    animation: wallMove 2s infinite linear;
 
 }
+
 @keyframes wallMove{
     0%{
         left: 400px;
@@ -33,12 +45,22 @@ background: linear-gradient(7deg, rgba(53,143,144,1) 0%, rgba(80,120,74,0.389793
         left: -50px;
     }
 }
-.hole{
-    position: relative;
-    top: -500px;
-    width: 50px;
-    height: 100px;
-    background-color: rgb(233, 255, 188);
-    animation: wallMove 7s infinite linear;
 
+.bird{
+    position: fixed;
+    top: 100px;
+    width: 50px;
+    height: 50px;
+    
+}
+.bird img{
+    width:50px;
+     height: 50px;
+}
+.scoreboard{
+    position: absolute;
+    width: 400px;
+    top: 510px;
+    font-size: 30px;
+    color:  rgb(7, 10, 10);
 }
