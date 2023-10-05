@@ -26,7 +26,9 @@ background: linear-gradient(7deg, rgba(53,143,144,1) 0%, rgba(80,120,74,0.389793
     width: 30px;
     background-color: rgb(0, 0, 0);
     left: 400px;
-    animation: wallMove 4s infinite linear;
+    /* animation: ; */
+    animation: wallMove 4s infinite linear ;
+    animation-play-state: paused;
 }
 .hole{
     position: relative;
@@ -35,7 +37,9 @@ background: linear-gradient(7deg, rgba(53,143,144,1) 0%, rgba(80,120,74,0.389793
     height: 100px;
     left: 400px;
     background-color: rgb(188, 255, 255);
+    /* animation: ; */
     animation: wallMove 4s infinite linear;
+    animation-play-state: paused;
 
 }
 
@@ -53,7 +57,7 @@ background: linear-gradient(7deg, rgba(53,143,144,1) 0%, rgba(80,120,74,0.389793
     top: 100px;
     width: 50px;
     height: 50px;
-    /* transition: top .1s ease; */
+   
 }
 .UFO img{
     width:50px;
@@ -79,9 +83,29 @@ background: linear-gradient(7deg, rgba(53,143,144,1) 0%, rgba(80,120,74,0.389793
     height: 500px;
     background: rgba(102, 51, 153, 0.301);
 }
-.game-start span:nth-child(1)::after{
-    font-family: "Font Awesome 5 Free";
-    content: "/f062";
+.game-start span{
+    display: inline-block;
+    width: 200px;
+    text-align: start;
+    color: aquamarine;
+    font-weight: 700;
+    
+}
+.game-start span:nth-child(1)::after,
+.game-start span:nth-child(2)::after{
+    font-family: "Font Awesome 6 Free";
+    content: "\f35b";
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.game-start span:nth-child(2)::after{
+    content: "\f358";
+ 
+}
+.close-start{
+    display: none;
 }
 .game-end{
     position: absolute;
@@ -96,7 +120,7 @@ background: linear-gradient(7deg, rgba(53,143,144,1) 0%, rgba(80,120,74,0.389793
     height: 500px;
     display: none;
 }
-.open{
+.open-end{
     display: flex;
 }
 .game-end p:first-child{
