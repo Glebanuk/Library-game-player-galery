@@ -43,9 +43,10 @@ document.addEventListener("keydown", (e) => {
     }
 })
 
+
 function setBestScore(score){
     localStorage.setItem("bestScore", score);
-    bestScore.innerHTML =`Best result: ${score}`;
+    bestScore.innerHTML =`Best result : ${score}`;
 }
 
 function getBestScore(){
@@ -82,7 +83,7 @@ function ufoFall() {
         let curUfoPosition = parseInt(window.getComputedStyle(UFO).getPropertyValue("top"));
 
         if (UFO.style.display === "block") {
-            UFO.style.top = (curUfoPosition + 2) + "px";
+            UFO.style.top = (curUfoPosition + 1) + "px";
         }
 
         let curWallPosition = parseInt(window.getComputedStyle(WALL).getPropertyValue("left"));
